@@ -1,0 +1,420 @@
+{
+  "data": {
+    "date": [],
+    "dates": [],
+    "event": [
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 1,
+        "id": 1,
+        "createdAt": "2015-03-04T21:12:36.505Z",
+        "updatedAt": "2015-03-04T22:52:52.948Z"
+      },
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 1,
+        "id": 2,
+        "createdAt": "2015-03-04T21:26:24.959Z",
+        "updatedAt": "2015-03-04T22:52:55.822Z"
+      },
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 1,
+        "id": 3,
+        "createdAt": "2015-03-04T21:26:35.780Z",
+        "updatedAt": "2015-03-04T22:52:58.345Z"
+      },
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 1,
+        "id": 4,
+        "createdAt": "2015-03-04T21:26:36.960Z",
+        "updatedAt": "2015-03-04T22:53:06.972Z"
+      },
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 1,
+        "id": 5,
+        "createdAt": "2015-03-04T21:26:37.746Z",
+        "updatedAt": "2015-03-04T22:53:09.360Z"
+      },
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 2,
+        "id": 6,
+        "createdAt": "2015-03-04T21:26:38.928Z",
+        "updatedAt": "2015-03-04T22:53:33.743Z"
+      },
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 2,
+        "id": 7,
+        "createdAt": "2015-03-04T21:26:40.224Z",
+        "updatedAt": "2015-03-04T22:53:37.018Z"
+      },
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 3,
+        "id": 8,
+        "createdAt": "2015-03-04T21:26:41.237Z",
+        "updatedAt": "2015-03-04T22:53:52.356Z"
+      },
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 4,
+        "id": 9,
+        "createdAt": "2015-03-04T21:26:42.705Z",
+        "updatedAt": "2015-03-04T22:54:19.464Z"
+      },
+      {
+        "startDate": "2011-12-10T00:00:00.000Z",
+        "endDate": "2011-12-11T00:00:00.000Z",
+        "headline": "Headline Goes Here",
+        "text": "<p>Body text goes here, some HTML is OK</p>",
+        "tag": "This is Optional",
+        "classname": "optionaluniqueclassnamecanbeaddedhere",
+        "asset": {
+          "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+          "thumbnail": "optional-32x32px.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "timeline": 3,
+        "id": 10,
+        "createdAt": "2015-03-04T21:26:43.482Z",
+        "updatedAt": "2015-03-04T22:54:13.881Z"
+      }
+    ],
+    "timeline": [
+      {
+        "headline": "The Main Timeline Headline Goes here",
+        "type": "default",
+        "text": "<p>Intro body text goes here, some HTML is ok</p>",
+        "asset": {
+          "media": "http://yourdomain_or_socialmedialink_goes_here.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "user": 1,
+        "id": 1,
+        "createdAt": "2015-03-04T22:47:34.275Z",
+        "updatedAt": "2015-03-04T22:47:34.275Z"
+      },
+      {
+        "headline": "The Main Timeline Headline Goes here",
+        "type": "default",
+        "text": "<p>Intro body text goes here, some HTML is ok</p>",
+        "asset": {
+          "media": "http://yourdomain_or_socialmedialink_goes_here.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "user": 1,
+        "id": 2,
+        "createdAt": "2015-03-04T22:51:24.554Z",
+        "updatedAt": "2015-03-04T22:51:24.554Z"
+      },
+      {
+        "headline": "The Main Timeline Headline Goes here",
+        "type": "default",
+        "text": "<p>Intro body text goes here, some HTML is ok</p>",
+        "asset": {
+          "media": "http://yourdomain_or_socialmedialink_goes_here.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "user": 2,
+        "id": 3,
+        "createdAt": "2015-03-04T22:51:44.307Z",
+        "updatedAt": "2015-03-04T22:51:44.307Z"
+      },
+      {
+        "headline": "The Main Timeline Headline Goes here",
+        "type": "default",
+        "text": "<p>Intro body text goes here, some HTML is ok</p>",
+        "asset": {
+          "media": "http://yourdomain_or_socialmedialink_goes_here.jpg",
+          "credit": "Credit Name Goes Here",
+          "caption": "Caption text goes here"
+        },
+        "user": 3,
+        "id": 4,
+        "createdAt": "2015-03-04T22:51:51.935Z",
+        "updatedAt": "2015-03-04T22:51:51.935Z"
+      }
+    ],
+    "user": [
+      {
+        "email": "john@example.com",
+        "password": "1234",
+        "id": 1,
+        "createdAt": "2015-03-04T21:59:04.746Z",
+        "updatedAt": "2015-03-04T22:41:21.193Z"
+      },
+      {
+        "email": "sarah@example.com",
+        "password": "1234",
+        "id": 2,
+        "createdAt": "2015-03-04T21:59:09.866Z",
+        "updatedAt": "2015-03-04T22:42:35.853Z"
+      },
+      {
+        "email": "mark@example.com",
+        "password": "1234",
+        "id": 3,
+        "createdAt": "2015-03-04T21:59:13.216Z",
+        "updatedAt": "2015-03-04T22:42:42.641Z"
+      },
+      {
+        "id": 4,
+        "createdAt": "2015-03-04T21:59:16.568Z",
+        "updatedAt": "2015-03-04T21:59:16.568Z"
+      },
+      {
+        "id": 5,
+        "createdAt": "2015-03-04T21:59:21.314Z",
+        "updatedAt": "2015-03-04T21:59:21.314Z"
+      },
+      {
+        "id": 6,
+        "createdAt": "2015-03-04T21:59:25.523Z",
+        "updatedAt": "2015-03-04T21:59:25.523Z"
+      }
+    ]
+  },
+  "schema": {
+    "date": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "dates": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "event": {
+      "startDate": {
+        "type": "date"
+      },
+      "endDate": {
+        "type": "date"
+      },
+      "headline": {
+        "type": "string"
+      },
+      "text": {
+        "type": "text"
+      },
+      "tag": {
+        "type": "string"
+      },
+      "classname": {
+        "type": "string"
+      },
+      "asset": {
+        "type": "json"
+      },
+      "timeline": {
+        "type": "integer",
+        "model": "timeline",
+        "foreignKey": true,
+        "alias": "timeline"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "timeline": {
+      "headline": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "text": {
+        "type": "text"
+      },
+      "asset": {
+        "type": "json"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "email": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "date": {},
+    "dates": {},
+    "event": {
+      "id": 10
+    },
+    "user": {
+      "id": 6
+    },
+    "timeline": {
+      "id": 4
+    }
+  }
+}
