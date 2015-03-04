@@ -13,17 +13,17 @@ module.exports = {
 		headline: 'string',
 		type: 'string',
 		text: 'text',
-		asset: {
+		asset: 'json', /*{
 			media: 'string',
 			credit: 'string',
 			caption: 'string'
-		},
+		},*/
 
 		// Sails associations
 		user: {
 			model: 'user'
 		},
-		events: {
+		dates: {
 			collection: 'event',
 			via: 'timeline'
 		}

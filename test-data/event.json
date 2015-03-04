@@ -10,5 +10,6 @@
         "thumbnail":"optional-32x32px.jpg",
         "credit":"Credit Name Goes Here",
         "caption":"Caption text goes here"
-    }
+    },
+    "timeline": 1
 }

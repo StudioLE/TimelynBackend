@@ -16,12 +16,12 @@ module.exports = {
 		text: 'text',
 		tag: 'string', // Optional
 		classname: 'string', // Optional
-		asset: {
+		asset: 'json', /*{
 			media: 'string',
 			thumbnail: 'string',
 			credit: 'string',
 			caption: 'string',
-		},
+		},*/
 
 		// Sails associations
 		timeline: {

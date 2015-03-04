@@ -1,0 +1,11 @@
+{
+    "headline":"The Main Timeline Headline Goes here",
+    "type":"default",
+    "text":"<p>Intro body text goes here, some HTML is ok</p>",
+    "asset": {
+        "media":"http://yourdomain_or_socialmedialink_goes_here.jpg",
+        "credit":"Credit Name Goes Here",
+        "caption":"Caption text goes here"
+    },
+    "user": 1
+}
