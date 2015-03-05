@@ -11,19 +11,26 @@ module.exports = {
 
 		// TimelineJS data
 		headline: 'string',
-		type: 'string',
+		type: {	
+			type: 'string',
+			defaultsTo: 'default'
+		},
 		text: 'text',
 		asset: 'json', /*{
 			media: 'string',
 			credit: 'string',
 			caption: 'string'
 		},*/
+		era: {	
+			type: 'array',
+			defaultsTo: []
+		},
 
 		// Sails associations
 		user: {
 			model: 'user'
 		},
-		dates: {
+		date: {
 			collection: 'event',
 			via: 'timeline'
 		}
