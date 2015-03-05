@@ -46,11 +46,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/render': {
-    view: 'timeline'
-  },
-
-  'r|^/t/(\\d+)$|id': {
+  'r|^/timeline/(\\d+)$|id': {
     view: 'timeline',
     /*locals: {
       id: req.param('id')
