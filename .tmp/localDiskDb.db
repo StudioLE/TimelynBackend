@@ -184,7 +184,6 @@
         "updatedAt": "2015-03-04T22:54:13.881Z"
       }
     ],
-    "passport": [],
     "timeline": [
       {
         "headline": "The Main Timeline Headline Goes here",
@@ -250,18 +249,21 @@
     "user": [
       {
         "email": "john@example.com",
+        "password": "1234",
         "id": 1,
         "createdAt": "2015-03-04T21:59:04.746Z",
         "updatedAt": "2015-03-04T22:41:21.193Z"
       },
       {
         "email": "sarah@example.com",
+        "password": "1234",
         "id": 2,
         "createdAt": "2015-03-04T21:59:09.866Z",
         "updatedAt": "2015-03-04T22:42:35.853Z"
       },
       {
         "email": "mark@example.com",
+        "password": "1234",
         "id": 3,
         "createdAt": "2015-03-04T21:59:13.216Z",
         "updatedAt": "2015-03-04T22:42:42.641Z"
@@ -353,41 +355,6 @@
         "type": "datetime"
       }
     },
-    "passport": {
-      "protocol": {
-        "type": "string"
-      },
-      "password": {
-        "type": "string"
-      },
-      "provider": {
-        "type": "string"
-      },
-      "identifier": {
-        "type": "string"
-      },
-      "tokens": {
-        "type": "json"
-      },
-      "user": {
-        "type": "integer",
-        "model": "user",
-        "foreignKey": true,
-        "alias": "user"
-      },
-      "id": {
-        "type": "integer",
-        "autoIncrement": true,
-        "primaryKey": true,
-        "unique": true
-      },
-      "createdAt": {
-        "type": "datetime"
-      },
-      "updatedAt": {
-        "type": "datetime"
-      }
-    },
     "timeline": {
       "headline": {
         "type": "string"
@@ -426,13 +393,11 @@
       }
     },
     "user": {
-      "username": {
-        "type": "string",
-        "unique": true
-      },
       "email": {
-        "type": "string",
-        "unique": true
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
       },
       "id": {
         "type": "integer",
@@ -459,7 +424,6 @@
     },
     "timeline": {
       "id": 4
-    },
-    "passport": {}
+    }
   }
 }
