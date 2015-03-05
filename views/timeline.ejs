@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>TimelineJS Embed</title>
+<meta charset="utf-8">
+<meta name="description" content="TimelineJS Embed">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<!-- Style-->
+<style>
+html, body {
+height: 100%;
+padding: 0px;
+margin: 0px;
+}
+
+#timeline-embed { height: 100%; }
+</style>
+<!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+</html>
+<body>
+<div id="timeline-embed"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://cdn.knightlab.com/libs/timeline/latest/js/storyjs-embed.js"></script>
+<script>
+$(document).ready(function() {
+	$.getJSON('/timeline/<%= req.param("id") %>', function(data) {
+		createStoryJS({
+			type: 'timeline',
+			width: '100%',
+			height: '600',
+			source: { 
+				"timeline": data
+			},
+			// embed_id: 'timeline-embed', //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED
+			// start_at_end: false, //OPTIONAL START AT LATEST DATE
+			// start_at_slide: '4', //OPTIONAL START AT SPECIFIC SLIDE
+			// start_zoom_adjust: '3', //OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL
+			// hash_bookmark: true, //OPTIONAL LOCATION BAR HASHES
+			// font: 'Bevan-PotanoSans', //OPTIONAL FONT
+			debug: true, //OPTIONAL DEBUG TO CONSOLE
+			// lang: 'fr', //OPTIONAL LANGUAGE
+			// maptype: 'watercolor', //OPTIONAL MAP STYLE
+			// css: 'path_to_css/timeline.css', //OPTIONAL PATH TO CSS
+			// js: 'path_to_js/timeline-min.js' //OPTIONAL PATH TO JS
+		})
+	})
+})
+</script>
+</body>
