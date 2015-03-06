@@ -69,7 +69,7 @@ var AuthController = {
    */
   logout: function (req, res) {
     req.logout();
-    res.redirect('/');
+    res.redirect(sails.config.custom.afterLogout);
   },
 
   /**
@@ -141,13 +141,13 @@ var AuthController = {
 
       switch (action) {
         case 'register':
-          res.redirect('/register');
+          res.redirect(sails.config.custom.registerError);
           break;
         case 'disconnect':
-          res.redirect('back');
+          res.redirect(sails.config.custom.disconnectRedirect);
           break;
         default:
-          res.redirect('/login');
+          res.redirect(sails.config.custom.defaultError);
       }
     }
 
@@ -163,7 +163,7 @@ var AuthController = {
 
         // Upon successful login, send the user to the homepage were req.user
         // will available.
-        res.redirect('/');
+        res.redirect(sails.config.custom.afterLogin);
       });
     });
   },
