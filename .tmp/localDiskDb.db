@@ -184,7 +184,32 @@
         "updatedAt": "2015-03-04T22:54:13.881Z"
       }
     ],
-    "passport": [],
+    "passport": [
+      {
+        "protocol": "local",
+        "password": "$2a$10$kwxLhn28ecGZsZNVmBukKegEeKRNsFBGwZnli5XKxJ/3xZWwoqaPi",
+        "user": 1,
+        "id": 1,
+        "createdAt": "2015-03-06T19:40:44.623Z",
+        "updatedAt": "2015-03-06T19:40:44.623Z"
+      },
+      {
+        "protocol": "local",
+        "password": "$2a$10$WpmoorxAaLWGbnA79rS.iuajQmcHYMy6JztHDfY.RSWcMQQNTYfW.",
+        "user": 2,
+        "id": 2,
+        "createdAt": "2015-03-06T19:50:49.774Z",
+        "updatedAt": "2015-03-06T19:50:49.774Z"
+      },
+      {
+        "protocol": "local",
+        "password": "$2a$10$rnAwXyBuqgo2d.YV.d3Rdu/90UsKtpZkEduyvn2LQDm.hmmXkZC9u",
+        "user": 3,
+        "createdAt": "2015-03-06T19:55:50.241Z",
+        "updatedAt": "2015-03-06T19:55:50.241Z",
+        "id": 3
+      }
+    ],
     "timeline": [
       {
         "headline": "The Main Timeline Headline Goes here",
@@ -249,37 +274,25 @@
     ],
     "user": [
       {
+        "username": "john",
         "email": "john@example.com",
         "id": 1,
-        "createdAt": "2015-03-04T21:59:04.746Z",
-        "updatedAt": "2015-03-04T22:41:21.193Z"
+        "createdAt": "2015-03-06T19:40:44.349Z",
+        "updatedAt": "2015-03-06T19:40:44.349Z"
       },
       {
+        "username": "sarah",
         "email": "sarah@example.com",
         "id": 2,
-        "createdAt": "2015-03-04T21:59:09.866Z",
-        "updatedAt": "2015-03-04T22:42:35.853Z"
+        "createdAt": "2015-03-06T19:50:49.486Z",
+        "updatedAt": "2015-03-06T19:50:49.486Z"
       },
       {
+        "username": "mark",
         "email": "mark@example.com",
-        "id": 3,
-        "createdAt": "2015-03-04T21:59:13.216Z",
-        "updatedAt": "2015-03-04T22:42:42.641Z"
-      },
-      {
-        "id": 4,
-        "createdAt": "2015-03-04T21:59:16.568Z",
-        "updatedAt": "2015-03-04T21:59:16.568Z"
-      },
-      {
-        "id": 5,
-        "createdAt": "2015-03-04T21:59:21.314Z",
-        "updatedAt": "2015-03-04T21:59:21.314Z"
-      },
-      {
-        "id": 6,
-        "createdAt": "2015-03-04T21:59:25.523Z",
-        "updatedAt": "2015-03-04T21:59:25.523Z"
+        "createdAt": "2015-03-06T19:55:49.965Z",
+        "updatedAt": "2015-03-06T19:55:49.965Z",
+        "id": 3
       }
     ]
   },
@@ -455,11 +468,13 @@
       "id": 10
     },
     "user": {
-      "id": 6
+      "id": 3
     },
     "timeline": {
       "id": 4
     },
-    "passport": {}
+    "passport": {
+      "id": 3
+    }
   }
 }
