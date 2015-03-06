@@ -59,6 +59,10 @@ module.exports.routes = {
   'get /auth/:provider/:action': 'AuthController.callback',
 
 
+  // Dashboard
+  'get /dashboard': 'DashboardController.index',
+
+
   // Timeline
   'r|^/timeline/(\\d+)$|id': {
     view: 'timeline',

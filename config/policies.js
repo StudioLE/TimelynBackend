@@ -51,13 +51,17 @@ module.exports.policies = {
 
 	
 
-	'*': ['passport'],
+	'*': ['passport', 'isLoggedIn'],
 
-	/*TimelineController: {
-		'*': ['passport', 'sessionAuth']
-	},*/
+	AuthController: {
+		'*': ['passport']
+	},
+	
+	TimelineController: {
+		'*': ['passport']
+	},
 
-	EventController: {
-		'*': ['passport', 'sessionAuth']
-	}
+	/*EventController: {
+		'*': ['passport', 'isLoggedIn']
+	}*/
 };

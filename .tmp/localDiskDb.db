@@ -205,9 +205,9 @@
         "protocol": "local",
         "password": "$2a$10$rnAwXyBuqgo2d.YV.d3Rdu/90UsKtpZkEduyvn2LQDm.hmmXkZC9u",
         "user": 3,
+        "id": 3,
         "createdAt": "2015-03-06T19:55:50.241Z",
-        "updatedAt": "2015-03-06T19:55:50.241Z",
-        "id": 3
+        "updatedAt": "2015-03-06T19:55:50.241Z"
       }
     ],
     "timeline": [
@@ -290,9 +290,9 @@
       {
         "username": "mark",
         "email": "mark@example.com",
+        "id": 3,
         "createdAt": "2015-03-06T19:55:49.965Z",
-        "updatedAt": "2015-03-06T19:55:49.965Z",
-        "id": 3
+        "updatedAt": "2015-03-06T19:55:49.965Z"
       }
     ]
   },
