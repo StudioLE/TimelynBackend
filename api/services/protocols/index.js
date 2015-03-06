@@ -1,7 +1,7 @@
-// api/models/User.js
+// api/services/protocols/index.js
 
 var _ = require('lodash');
-var _super = require('sails-auth/api/models/User');
+var _super = require('sails-auth/api/services/protocols/index');
 
 _.merge(exports, _super);
 _.merge(exports, {
