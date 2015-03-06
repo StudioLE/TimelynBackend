@@ -2,6 +2,7 @@
   "data": {
     "date": [],
     "dates": [],
+    "passport": [],
     "event": [
       {
         "startDate": "1940-12-10T00:00:00.000Z",
@@ -184,7 +185,6 @@
         "updatedAt": "2015-03-04T22:54:13.881Z"
       }
     ],
-    "passport": [],
     "timeline": [
       {
         "headline": "The Main Timeline Headline Goes here",
@@ -312,6 +312,41 @@
         "type": "datetime"
       }
     },
+    "passport": {
+      "protocol": {
+        "type": "string"
+      },
+      "password": {
+        "type": "string"
+      },
+      "provider": {
+        "type": "string"
+      },
+      "identifier": {
+        "type": "string"
+      },
+      "tokens": {
+        "type": "json"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "event": {
       "startDate": {
         "type": "date"
@@ -339,41 +374,6 @@
         "model": "timeline",
         "foreignKey": true,
         "alias": "timeline"
-      },
-      "id": {
-        "type": "integer",
-        "autoIncrement": true,
-        "primaryKey": true,
-        "unique": true
-      },
-      "createdAt": {
-        "type": "datetime"
-      },
-      "updatedAt": {
-        "type": "datetime"
-      }
-    },
-    "passport": {
-      "protocol": {
-        "type": "string"
-      },
-      "password": {
-        "type": "string"
-      },
-      "provider": {
-        "type": "string"
-      },
-      "identifier": {
-        "type": "string"
-      },
-      "tokens": {
-        "type": "json"
-      },
-      "user": {
-        "type": "integer",
-        "model": "user",
-        "foreignKey": true,
-        "alias": "user"
       },
       "id": {
         "type": "integer",
@@ -426,13 +426,12 @@
       }
     },
     "user": {
-      "username": {
-        "type": "string",
-        "unique": true
-      },
       "email": {
         "type": "string",
         "unique": true
+      },
+      "password": {
+        "type": "string"
       },
       "id": {
         "type": "integer",
