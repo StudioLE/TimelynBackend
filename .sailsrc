@@ -1,7 +1,5 @@
 {
   "generators": {
-    "modules": {
-      "auth-api": "sails-auth"
-    }
+    "modules": {}
   }
 }

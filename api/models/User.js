@@ -1,20 +1,12 @@
-// api/models/User.js
+var User = {
+  // Enforce model schema in the case of schemaless databases
+  schema: true,
 
-var _ = require('lodash');
-var _super = require('sails-auth/api/models/User');
+  attributes: {
+    username  : { type: 'string', unique: true },
+    email     : { type: 'email',  unique: true },
+    passports : { collection: 'Passport', via: 'user' }
+  }
+};
 
-_.merge(exports, _super);
-_.merge(exports, {
-
-  // Extend with custom logic here by adding additional fields, methods, etc.
-
-  /**
-   * For example:
-   *
-   * foo: function (bar) {
-   *   bar.x = 1;
-   *   bar.y = 2;
-   *   return _super.foo(bar);
-   * }
-   */
-});
+module.exports = User;

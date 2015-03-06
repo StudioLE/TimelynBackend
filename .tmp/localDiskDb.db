@@ -184,16 +184,7 @@
         "updatedAt": "2015-03-04T22:54:13.881Z"
       }
     ],
-    "passport": [
-      {
-        "protocol": "local",
-        "password": null,
-        "user": 9,
-        "id": 1,
-        "createdAt": "2015-03-06T03:10:52.255Z",
-        "updatedAt": "2015-03-06T03:10:52.255Z"
-      }
-    ],
+    "passport": [],
     "timeline": [
       {
         "headline": "The Main Timeline Headline Goes here",
@@ -258,12 +249,6 @@
     ],
     "user": [
       {
-        "email": "sdfsdf@example.com",
-        "id": 7,
-        "createdAt": "2015-03-04T21:59:04.746Z",
-        "updatedAt": "2015-03-04T22:41:21.193Z"
-      },
-      {
         "email": "john@example.com",
         "id": 1,
         "createdAt": "2015-03-04T21:59:04.746Z",
@@ -295,32 +280,6 @@
         "id": 6,
         "createdAt": "2015-03-04T21:59:25.523Z",
         "updatedAt": "2015-03-04T21:59:25.523Z"
-      },
-      {
-        "id": 9,
-        "createdAt": "2015-03-06T03:10:52.248Z",
-        "updatedAt": "2015-03-06T03:10:52.248Z"
-      },
-      {
-        "username": "greg",
-        "email": "greg@example.com",
-        "id": 10,
-        "createdAt": "2015-03-06T10:37:45.167Z",
-        "updatedAt": "2015-03-06T10:37:45.167Z"
-      },
-      {
-        "username": "dsfsdfsdf",
-        "email": "fsdgdfg@example.com",
-        "id": 11,
-        "createdAt": "2015-03-06T10:39:04.756Z",
-        "updatedAt": "2015-03-06T10:39:04.756Z"
-      },
-      {
-        "email": "cc@example.com",
-        "username": "cc",
-        "createdAt": "2015-03-06T10:39:31.788Z",
-        "updatedAt": "2015-03-06T10:39:31.788Z",
-        "id": 12
       }
     ]
   },
@@ -469,15 +428,11 @@
     "user": {
       "username": {
         "type": "string",
-        "unique": true,
-        "index": true,
-        "notNull": true
+        "unique": true
       },
       "email": {
         "type": "string",
-        "notNull": true,
-        "unique": true,
-        "index": true
+        "unique": true
       },
       "id": {
         "type": "integer",
@@ -500,13 +455,11 @@
       "id": 10
     },
     "user": {
-      "id": 12
+      "id": 6
     },
     "timeline": {
       "id": 4
     },
-    "passport": {
-      "id": 1
-    }
+    "passport": {}
   }
 }

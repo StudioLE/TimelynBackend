@@ -49,23 +49,15 @@ module.exports.policies = {
 		// feed : ['isNiceToAnimals', 'hasRabbitFood']
 	// }
 
-	/*
+	
+
 	'*': ['passport'],
+
+	/*TimelineController: {
+		'*': ['passport', 'sessionAuth']
+	},*/
 
 	EventController: {
 		'*': ['passport', 'sessionAuth']
 	}
-
-	/*TimelineController: {
-		'*': ['passport', 'sessionAuth']
-	}*/
-
-	// '*': [ 'basicAuth', 'passport', 'sessionAuth' ],
-
-	AuthController: {
-		'*': [ 'passport' ]
-	},
-
-	// '/register': 'passport'
-
 };
