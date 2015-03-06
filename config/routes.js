@@ -46,6 +46,11 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  //'post /login': 'AuthController.callback',
+  //'get /login': 'AuthController.callback',
+
+ // 'post /signup': 'UserController.create',
+
 
   // Timeline
   'r|^/timeline/(\\d+)$|id': {
