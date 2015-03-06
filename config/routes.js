@@ -46,6 +46,21 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  // Auth routes
+  'get /login': {
+    view: 'user/login'
+  },
+  'get /signup': {
+    view: 'user/signup' 
+  },
+  '/welcome': {
+    view: 'user/welcome'
+  },
+  'post /login': 'UserController.login',
+  'post /signup': 'UserController.signup',
+  '/logout': 'UserController.logout',
+
+  // Timeline view
   'r|^/timeline/(\\d+)$|id': {
     view: 'timeline',
     /*locals: {
