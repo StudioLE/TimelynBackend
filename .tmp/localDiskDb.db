@@ -210,6 +210,18 @@
         "updatedAt": "2015-03-06T19:55:50.241Z"
       }
     ],
+    "test": [
+      {
+        "id": 1,
+        "createdAt": "2015-03-07T00:44:42.317Z",
+        "updatedAt": "2015-03-07T00:44:42.317Z"
+      },
+      {
+        "id": 2,
+        "createdAt": "2015-03-07T00:49:46.371Z",
+        "updatedAt": "2015-03-07T00:49:46.371Z"
+      }
+    ],
     "timeline": [
       {
         "headline": "The Main Timeline Headline Goes here",
@@ -270,6 +282,13 @@
         "id": 4,
         "createdAt": "2015-03-04T22:51:51.935Z",
         "updatedAt": "2015-03-04T23:28:30.584Z"
+      },
+      {
+        "type": "default",
+        "era": [],
+        "id": 5,
+        "createdAt": "2015-03-07T00:33:27.466Z",
+        "updatedAt": "2015-03-07T00:33:27.466Z"
       }
     ],
     "user": [
@@ -401,6 +420,20 @@
         "type": "datetime"
       }
     },
+    "test": {
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
     "timeline": {
       "headline": {
         "type": "string"
@@ -471,9 +504,12 @@
       "id": 3
     },
     "timeline": {
-      "id": 4
+      "id": 5
     },
     "passport": {
+      "id": 3
+    },
+    "test": {
       "id": 3
     }
   }
