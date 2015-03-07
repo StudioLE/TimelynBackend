@@ -19,7 +19,7 @@
         "timeline": 1,
         "id": 1,
         "createdAt": "2015-03-04T21:12:36.505Z",
-        "updatedAt": "2015-03-04T22:52:52.948Z"
+        "updatedAt": "2015-03-07T21:01:09.613Z"
       },
       {
         "startDate": "1946-12-10T00:00:00.000Z",
@@ -114,7 +114,7 @@
       {
         "startDate": "2011-12-10T00:00:00.000Z",
         "endDate": "2011-12-11T00:00:00.000Z",
-        "headline": "Headline Goes Here",
+        "headline": "Hmmm",
         "text": "<p>Body text goes here, some HTML is OK</p>",
         "tag": "This is Optional",
         "classname": "optionaluniqueclassnamecanbeaddedhere",
@@ -127,7 +127,7 @@
         "timeline": 2,
         "id": 7,
         "createdAt": "2015-03-04T21:26:40.224Z",
-        "updatedAt": "2015-03-04T22:53:37.018Z"
+        "updatedAt": "2015-03-07T21:01:52.763Z"
       },
       {
         "startDate": "2011-12-10T00:00:00.000Z",
@@ -236,7 +236,7 @@
         "user": 1,
         "id": 1,
         "createdAt": "2015-03-04T22:47:34.275Z",
-        "updatedAt": "2015-03-04T22:47:34.275Z"
+        "updatedAt": "2015-03-07T21:01:09.567Z"
       },
       {
         "headline": "Revolutionary User Interfaces",
@@ -251,7 +251,7 @@
         "user": 1,
         "id": 2,
         "createdAt": "2015-03-04T22:51:24.554Z",
-        "updatedAt": "2015-03-04T22:51:24.554Z"
+        "updatedAt": "2015-03-07T21:01:52.715Z"
       },
       {
         "headline": "History of Ghana",
