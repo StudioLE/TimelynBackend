@@ -18,13 +18,15 @@ module.exports = {
         // If the use is logged in use that data
         if(req.user) {
             user = req.user
+            user.role = 'user'
         }
         // If not logged in apply guest
         else {
             user = {
                 id: null,
                 email: null,
-                username: 'guest'
+                username: 'guest',
+                role: null
             }
         }
 
@@ -33,9 +35,9 @@ module.exports = {
         sails.log(user);
         
         // Render a view
-        res.render('dashboard', {
+        sails.log(res.view('dashboard', {
             user: user
-        })
+        }))
     }
 };
 
