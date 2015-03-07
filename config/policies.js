@@ -51,17 +51,46 @@ module.exports.policies = {
 
 	
 
-	'*': ['passport', 'isLoggedIn'],
+	'*': false, //['passport', 'isLoggedIn'],
 
 	AuthController: {
 		'*': ['passport']
 	},
 	
-	TimelineController: {
+	DashboardController: {
+		// Must be loggedIn to view dashboard
 		'*': ['passport']
 	},
+	
+	TimelineController: {
+		// Blacklist
+		'*': false,
+		// Anyone can find individual
+		'findOne': ['passport'],
+		// Only loggedIn may create
+		'create': ['passport', 'isLoggedIn'],
+		// Only owner may update/destroy
+		'update': ['passport', 'isLoggedIn', 'belongsToUser'],
+		'destroy': ['passport', 'isLoggedIn', 'belongsToUser']
+	},
 
-	/*EventController: {
-		'*': ['passport', 'isLoggedIn']
-	}*/
+	EventController: {
+		// Blacklist
+		'*': false,
+		// Only loggedIn may create
+		'create': ['passport', 'isLoggedIn'],
+		// Only owner may findOne/update/destroy
+		'findOne': ['passport', 'isLoggedIn', 'belongsToUser'],
+		'update': ['passport', 'isLoggedIn', 'belongsToUser'],
+		'destroy': ['passport', 'isLoggedIn', 'belongsToUser']
+	},
+
+	TestController: {
+		'*': ['passport', 'isLoggedIn', 'belongsToUser'],
+		'find': true,
+		'findOne': true,
+		'create': true,
+		'update': true,
+		'destroy': true
+	}
 };
