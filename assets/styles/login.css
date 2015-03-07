@@ -1,0 +1,101 @@
+
+/*
+	// Colours
+*/
+/*
+	// Document
+*/
+body {
+  background: #403b33;
+  color: #edebe6;
+  font-family: 'Ubuntu Mono', 'Consolas', monospace;
+  font-size: 16px;
+}
+/*
+	// Vertical center
+*/
+html,
+body,
+.container {
+  height: 100%;
+}
+.container {
+  display: table;
+  vertical-align: middle;
+}
+.vertical-center {
+  display: table-cell;
+  vertical-align: middle;
+}
+/*
+	// Generic style
+*/
+a {
+  color: #94c7b6;
+}
+a:hover {
+  color: #484940;
+  text-decoration: none;
+}
+a:focus {
+  color: inherit;
+}
+/*
+	// Logo
+*/
+.logo {
+  margin-top: 25px;
+}
+.logo a {
+  margin-bottom: 20px;
+  display: block;
+  text-align: right;
+}
+.logo a .title {
+  color: #d3643b;
+  font-size: 60px;
+}
+.logo a .tag {
+  color: #94c7b6;
+  font-size: 16px;
+  position: absolute;
+  right: -7px;
+  top: 62px;
+}
+@media (max-width: 767px) {
+  .logo a {
+    margin-right: 22px;
+  }
+  .logo a .tag {
+    right: 15px;
+  }
+}
+/*
+	// Login
+*/
+.login {
+  margin-top: 8px;
+  color: #94c7b6;
+}
+.login label,
+.login button {
+  display: none;
+}
+.status {
+  margin-bottom: 8px;
+  padding-left: 6px;
+  visibility: hidden;
+}
+.warn {
+  visibility: visible;
+  color: #b03f3b;
+}
+.form-control {
+  height: 34px;
+  padding: 6px 12px;
+  color: #a8a59e;
+  background: #4e483e;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
