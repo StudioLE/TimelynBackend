@@ -11,17 +11,20 @@ module.exports = {
 
 		// TimelineJS data
 		headline: 'string',
-		type: {	
+		type: { 
 			type: 'string',
 			defaultsTo: 'default'
 		},
 		text: 'text',
-		asset: 'json', /*{
-			media: 'string',
-			credit: 'string',
-			caption: 'string'
-		},*/
-		era: {	
+		asset: {    
+			type: 'json',
+			defaultsTo: {
+				"media": "",
+				"credit": "",
+				"caption": ""
+			}
+		},
+		era: {  
 			type: 'array',
 			defaultsTo: []
 		},
