@@ -446,7 +446,12 @@
         "type": "text"
       },
       "asset": {
-        "type": "json"
+        "type": "json",
+        "defaultsTo": {
+          "media": "",
+          "credit": "",
+          "caption": ""
+        }
       },
       "era": {
         "type": "array",
