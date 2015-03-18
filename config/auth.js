@@ -15,7 +15,34 @@ module.exports.auth = {
 
   /****************************************************************************
   *                                                                           *
-  * Auth responses                                                            *
+  * Auth check                                                                *
+  *                                                                           *
+  ****************************************************************************/
+
+  // Check if a user is logged in
+  isLoggedIn: function(req, res) {
+    console.log(req.user)
+    if (req.user) {
+      res.status(200).send({
+        status: 'user is logged in',
+        user: {
+          username: req.user.username,
+          email: req.user.email,
+          id: req.user.id
+        }
+      })
+    }
+    else {
+      res.status(401).send({
+        error: 'user not logged in',
+        user: false
+      })
+    }
+  },
+
+  /****************************************************************************
+  *                                                                           *
+  * Auth success responses                                                    *
   *                                                                           *
   ****************************************************************************/
 
@@ -38,9 +65,16 @@ module.exports.auth = {
     })
   },
 
-  // If an error was thrown, redirect the user to the
-  // login, register or disconnect action initiator view.
-  // These views should take care of rendering the error messages.
+  /****************************************************************************
+  *                                                                           *
+  * Auth error responses                                                      *
+  *                                                                           *
+  * If an error was thrown, redirect the user to the
+  * login, register or disconnect action initiator view.
+  * These views should take care of rendering the error messages.
+  *                                                                           *
+  ****************************************************************************/
+  // 
   loginError: function(req, res) {
     // res.redirect('/login')
     res.status(401).send({
@@ -61,6 +95,5 @@ module.exports.auth = {
       error: 'disconnect error'
     })
   }
-
 
 };

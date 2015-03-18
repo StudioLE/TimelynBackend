@@ -181,6 +181,16 @@ var AuthController = {
    */
   disconnect: function (req, res) {
     passport.disconnect(req, res);
+  },
+
+  /**
+   * Check if user is logged in
+   *
+   * @param {Object} req
+   * @param {Object} res
+   */
+  isLoggedIn: function (req, res) {
+    sails.config.auth.isLoggedIn(req, res)
   }
 };
 
