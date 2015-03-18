@@ -69,7 +69,7 @@ var AuthController = {
    */
   logout: function (req, res) {
     req.logout();
-    res.redirect(sails.config.custom.afterLogout);
+    sails.config.auth.afterLogout()
   },
 
   /**
@@ -141,13 +141,16 @@ var AuthController = {
 
       switch (action) {
         case 'register':
-          res.redirect(sails.config.custom.registerError);
+          // res.redirect(sails.config.custom.registerError);
+          sails.config.auth.registerError(req, res)
           break;
         case 'disconnect':
-          res.redirect(sails.config.custom.disconnectRedirect);
+          // res.redirect(sails.config.custom.disconnectRedirect);
+          sails.config.auth.disconnectError(req, res)
           break;
         default:
-          res.redirect(sails.config.custom.defaultError);
+          //res.redirect(sails.config.custom.defaultError);
+          sails.config.auth.loginError(req, res)
       }
     }
 
@@ -163,7 +166,9 @@ var AuthController = {
 
         // Upon successful login, send the user to the homepage were req.user
         // will available.
-        res.redirect(sails.config.custom.afterLogin);
+        // res.redirect(sails.config.custom.afterLogin);
+        // On succesful login send 'success'
+        sails.config.auth.afterLogin(req, res)
       });
     });
   },
