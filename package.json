@@ -1,8 +1,8 @@
 {
-  "name": "SailsTimelineBackend",
+  "name": "TimelynBackend",
   "private": true,
   "version": "0.0.0",
-  "description": "The Sails.js backend for SailsTimeline",
+  "description": "The Sails.js backend for Timelyn",
   "keywords": [],
   "dependencies": {
     "bcryptjs": "^2.1.0",
@@ -34,7 +34,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/StudioLE/SailsTimelineBackend.git"
+    "url": "git://github.com/StudioLE/TimelynBackend.git"
   },
   "author": "Laurence Elsdon",
   "license": ""
