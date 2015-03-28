@@ -69,7 +69,7 @@ var AuthController = {
    */
   logout: function (req, res) {
     req.logout();
-    sails.config.auth.afterLogout()
+    sails.config.auth.afterLogout(req, res)
   },
 
   /**
