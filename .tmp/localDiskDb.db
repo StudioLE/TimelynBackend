@@ -2,107 +2,8 @@
   "data": {
     "date": [],
     "dates": [],
-    "passport": [
-      {
-        "protocol": "local",
-        "password": "$2a$10$kwxLhn28ecGZsZNVmBukKegEeKRNsFBGwZnli5XKxJ/3xZWwoqaPi",
-        "user": 1,
-        "id": 1,
-        "createdAt": "2015-03-06T19:40:44.623Z",
-        "updatedAt": "2015-03-06T19:40:44.623Z"
-      },
-      {
-        "protocol": "local",
-        "password": "$2a$10$WpmoorxAaLWGbnA79rS.iuajQmcHYMy6JztHDfY.RSWcMQQNTYfW.",
-        "user": 2,
-        "id": 2,
-        "createdAt": "2015-03-06T19:50:49.774Z",
-        "updatedAt": "2015-03-06T19:50:49.774Z"
-      },
-      {
-        "protocol": "local",
-        "password": "$2a$10$rnAwXyBuqgo2d.YV.d3Rdu/90UsKtpZkEduyvn2LQDm.hmmXkZC9u",
-        "user": 3,
-        "id": 3,
-        "createdAt": "2015-03-06T19:55:50.241Z",
-        "updatedAt": "2015-03-06T19:55:50.241Z"
-      },
-      {
-        "protocol": "local",
-        "password": "$2a$10$G6CMH7aupqrdHpvQ7EOjYOoVRSGlW5hx1RNjy3evnD87kzBlNRXzK",
-        "user": 4,
-        "id": 4,
-        "createdAt": "2015-03-18T01:09:16.313Z",
-        "updatedAt": "2015-03-18T01:09:16.313Z"
-      }
-    ],
-    "test": [
-      {
-        "id": 1,
-        "createdAt": "2015-03-07T00:44:42.317Z",
-        "updatedAt": "2015-03-07T00:44:42.317Z"
-      },
-      {
-        "id": 2,
-        "createdAt": "2015-03-07T00:49:46.371Z",
-        "updatedAt": "2015-03-07T00:49:46.371Z"
-      }
-    ],
-    "attempt": [
-      {
-        "user": 5,
-        "successful": true,
-        "ip": "127.0.0.1",
-        "port": "60112",
-        "id": 1,
-        "createdAt": "2015-03-29T02:38:36.470Z",
-        "updatedAt": "2015-03-29T02:38:36.470Z"
-      },
-      {
-        "user": 5,
-        "successful": true,
-        "ip": "127.0.0.1",
-        "port": "60153",
-        "createdAt": "2015-03-29T02:44:51.170Z",
-        "updatedAt": "2015-03-29T02:44:51.170Z",
-        "id": 2
-      },
-      {
-        "user": 5,
-        "successful": true,
-        "ip": "127.0.0.1",
-        "port": "60154",
-        "createdAt": "2015-03-29T02:44:53.991Z",
-        "updatedAt": "2015-03-29T02:44:53.991Z",
-        "id": 3
-      },
-      {
-        "user": 5,
-        "successful": false,
-        "ip": "127.0.0.1",
-        "port": "60155",
-        "createdAt": "2015-03-29T02:45:01.395Z",
-        "updatedAt": "2015-03-29T02:45:01.395Z",
-        "id": 4
-      }
-    ],
-    "auth": [
-      {
-        "user": 5,
-        "email": "foo@bar.com",
-        "password": "$2a$10$7HHYQUfwr7cw0oTluGrDM.yQOAyv47Pofofl68.Cek.h5e5SKmZsi",
-        "id": 1,
-        "createdAt": "2015-03-29T02:38:36.344Z",
-        "updatedAt": "2015-03-29T02:38:36.373Z"
-      },
-      {
-        "password": "$2a$10$Rvir.AGmBJJl8gO/BbvOaOL11F9dVA1YJdt84wYv1jc9S7o9woFWK",
-        "email": "fonnno@bar.com",
-        "createdAt": "2015-03-29T02:45:25.269Z",
-        "updatedAt": "2015-03-29T02:45:25.269Z",
-        "id": 2
-      }
-    ],
+    "attempt": [],
+    "auth": [],
     "event": [
       {
         "startDate": "1600-01-01T00:00:00.000Z",
@@ -616,34 +517,7 @@
       }
     ],
     "use": [],
-    "user": [
-      {
-        "id": 1,
-        "createdAt": "2015-03-06T19:40:44.349Z",
-        "updatedAt": "2015-03-12T01:02:52.792Z"
-      },
-      {
-        "id": 2,
-        "createdAt": "2015-03-06T19:50:49.486Z",
-        "updatedAt": "2015-03-06T19:50:49.486Z"
-      },
-      {
-        "id": 3,
-        "createdAt": "2015-03-06T19:55:49.965Z",
-        "updatedAt": "2015-03-06T19:55:49.965Z"
-      },
-      {
-        "id": 4,
-        "createdAt": "2015-03-18T01:09:16.059Z",
-        "updatedAt": "2015-03-18T01:09:16.059Z"
-      },
-      {
-        "auth": 1,
-        "id": 5,
-        "createdAt": "2015-03-29T02:38:36.365Z",
-        "updatedAt": "2015-03-29T02:38:36.365Z"
-      }
-    ]
+    "user": []
   },
   "schema": {
     "date": {
@@ -661,55 +535,6 @@
       }
     },
     "dates": {
-      "id": {
-        "type": "integer",
-        "autoIncrement": true,
-        "primaryKey": true,
-        "unique": true
-      },
-      "createdAt": {
-        "type": "datetime"
-      },
-      "updatedAt": {
-        "type": "datetime"
-      }
-    },
-    "passport": {
-      "protocol": {
-        "type": "string"
-      },
-      "password": {
-        "type": "string"
-      },
-      "provider": {
-        "type": "string"
-      },
-      "identifier": {
-        "type": "string"
-      },
-      "tokens": {
-        "type": "json"
-      },
-      "user": {
-        "type": "integer",
-        "model": "user",
-        "foreignKey": true,
-        "alias": "user"
-      },
-      "id": {
-        "type": "integer",
-        "autoIncrement": true,
-        "primaryKey": true,
-        "unique": true
-      },
-      "createdAt": {
-        "type": "datetime"
-      },
-      "updatedAt": {
-        "type": "datetime"
-      }
-    },
-    "test": {
       "id": {
         "type": "integer",
         "autoIncrement": true,
@@ -970,22 +795,16 @@
       "id": 38
     },
     "user": {
-      "id": 5
+      "id": 1
     },
     "timeline": {
       "id": 9
     },
-    "passport": {
-      "id": 4
-    },
-    "test": {
-      "id": 3
-    },
     "attempt": {
-      "id": 4
+      "id": 1
     },
     "auth": {
-      "id": 2
+      "id": 1
     },
     "jwt": {},
     "resettoken": {},
