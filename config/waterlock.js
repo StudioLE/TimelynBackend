@@ -92,6 +92,9 @@ module.exports.waterlock = {
       // default - 'default'
       success: 'default',
 
+     // Auth isn't going to work until Waterlock merges PR #41
+     // https://github.com/waterlock/waterlock/pull/41
+
       // This can be any one of the following
       // 
       // url - 'http://example.com'
