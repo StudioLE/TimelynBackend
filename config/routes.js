@@ -46,27 +46,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  // Passport
-  // 'get /login': 'AuthController.login',
-  // 'get /logout': 'AuthController.logout',
-  // 'get /register': 'AuthController.register',
-   
-  // Passport local auth
-  // 'post /auth/local': 'AuthController.callback',
-  // 'post /auth/local/:action': 'AuthController.callback',
-   
-  // Passport auth providers
-  // 'get /auth/:provider': 'AuthController.provider',
-  // 'get /auth/:provider/callback': 'AuthController.callback',
-  // 'get /auth/:provider/:action': 'AuthController.callback',
-
-  // isLoggedIn
-  // 'get /user': 'AuthController.isLoggedIn',
-
-  // Dashboard
-  // 'get /dashboard': 'DashboardController.index',
-
-
   // Timeline
   'r|^/timeline/(\\d+)$|id': {
     view: 'timeline',
