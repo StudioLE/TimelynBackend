@@ -1,9 +1,15 @@
 {
   "data": {
-    "date": [],
-    "dates": [],
     "attempt": [],
-    "auth": [],
+    "auth": [
+      {
+        "password": "$2a$10$/R.Sztc0CQ2rvGCti4aEguyeR9RWgnkrHzLToYBUVpHN790E/Jula",
+        "email": "mark@example.com",
+        "createdAt": "2015-03-29T03:20:02.308Z",
+        "updatedAt": "2015-03-29T03:20:02.308Z",
+        "id": 1
+      }
+    ],
     "event": [
       {
         "startDate": "1600-01-01T00:00:00.000Z",
@@ -789,25 +795,19 @@
     }
   },
   "counters": {
-    "date": {},
-    "dates": {},
     "event": {
       "id": 38
-    },
-    "user": {
-      "id": 1
     },
     "timeline": {
       "id": 9
     },
-    "attempt": {
-      "id": 1
-    },
+    "attempt": {},
     "auth": {
       "id": 1
     },
     "jwt": {},
     "resettoken": {},
-    "use": {}
+    "use": {},
+    "user": {}
   }
 }
