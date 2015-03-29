@@ -13,7 +13,7 @@ module.exports.waterlock = {
   // 
   // used by auth methods for callback URI's using oauth and for password
   // reset links.
-  baseUrl: 'http://localhost:1337',
+  baseUrl: 'https://timelyn.io',
   
   // Auth Method(s) 
   // 
@@ -37,14 +37,14 @@ module.exports.waterlock = {
           },
           from: 'no-reply@domain.com',
           subject: 'Your password reset!',
-          forwardUrl: 'http://localhost:1337'
+          forwardUrl: 'https://timelyn.io'
         },  
         template:{
           file: '../views/email.jade',
           vars:{}
         }
       },
-      createOnNotFound: true
+      createOnNotFound: false
     }
   ],
 
@@ -56,13 +56,13 @@ module.exports.waterlock = {
   jsonWebTokens:{
 
     // CHANGE THIS SECRET
-    secret: 'this is my secret',
+    secret: 'mfYgTrA3AqiwhSeL7oHgdO4i',
     expiry:{
       unit: 'days',
       length: '7'
     },
-    audience: 'app name',
-    subject: 'subject',
+    audience: 'timelyn',
+    subject: 'timelyn',
 
     // tracks jwt usage if set to true
     trackUsage: true,
