@@ -1,13 +1,75 @@
 {
   "data": {
-    "attempt": [],
+    "attempt": [
+      {
+        "user": 1,
+        "successful": true,
+        "ip": "127.0.0.1",
+        "port": "60329",
+        "createdAt": "2015-03-29T03:37:17.096Z",
+        "updatedAt": "2015-03-29T03:37:17.096Z",
+        "id": 1
+      },
+      {
+        "user": 2,
+        "successful": true,
+        "ip": "127.0.0.1",
+        "port": "60330",
+        "createdAt": "2015-03-29T03:37:24.995Z",
+        "updatedAt": "2015-03-29T03:37:24.995Z",
+        "id": 2
+      },
+      {
+        "user": 3,
+        "successful": true,
+        "ip": "127.0.0.1",
+        "port": "60331",
+        "createdAt": "2015-03-29T03:37:30.041Z",
+        "updatedAt": "2015-03-29T03:37:30.041Z",
+        "id": 3
+      },
+      {
+        "user": 4,
+        "successful": true,
+        "ip": "127.0.0.1",
+        "port": "60332",
+        "createdAt": "2015-03-29T03:37:35.245Z",
+        "updatedAt": "2015-03-29T03:37:35.245Z",
+        "id": 4
+      }
+    ],
     "auth": [
       {
-        "password": "$2a$10$/R.Sztc0CQ2rvGCti4aEguyeR9RWgnkrHzLToYBUVpHN790E/Jula",
+        "password": "$2a$10$UnFXTNlOEQ7Qx2vL9Jtz9eXb9dSlymyu9mbPUHC9z9OBjSpjo9z1O",
         "email": "mark@example.com",
-        "createdAt": "2015-03-29T03:20:02.308Z",
-        "updatedAt": "2015-03-29T03:20:02.308Z",
-        "id": 1
+        "createdAt": "2015-03-29T03:37:16.970Z",
+        "updatedAt": "2015-03-29T03:37:16.999Z",
+        "id": 1,
+        "user": 1
+      },
+      {
+        "password": "$2a$10$PUlcG1sjiyGWWClfM68guOmRXsUy8JijTTgUqXx/UrU1m0VWZ9VG6",
+        "email": "sarah@example.com",
+        "createdAt": "2015-03-29T03:37:24.890Z",
+        "updatedAt": "2015-03-29T03:37:24.901Z",
+        "id": 2,
+        "user": 2
+      },
+      {
+        "password": "$2a$10$UX/A5o7yZdFuI1nL/tn4.e6dh8y74PVPDPoO6k9Iii2HdRNqxXsTu",
+        "email": "tim@example.com",
+        "createdAt": "2015-03-29T03:37:29.936Z",
+        "updatedAt": "2015-03-29T03:37:29.948Z",
+        "id": 3,
+        "user": 3
+      },
+      {
+        "password": "$2a$10$LtsfEuAdNQQlhXGzJcp2Jum7LNBDJeLu/z5iFC9D3Rq5Vyru18xd2",
+        "email": "mandy@example.com",
+        "createdAt": "2015-03-29T03:37:35.139Z",
+        "updatedAt": "2015-03-29T03:37:35.153Z",
+        "id": 4,
+        "user": 4
       }
     ],
     "event": [
@@ -523,7 +585,32 @@
       }
     ],
     "use": [],
-    "user": []
+    "user": [
+      {
+        "auth": 1,
+        "createdAt": "2015-03-29T03:37:16.989Z",
+        "updatedAt": "2015-03-29T03:37:16.989Z",
+        "id": 1
+      },
+      {
+        "auth": 2,
+        "createdAt": "2015-03-29T03:37:24.897Z",
+        "updatedAt": "2015-03-29T03:37:24.897Z",
+        "id": 2
+      },
+      {
+        "auth": 3,
+        "createdAt": "2015-03-29T03:37:29.945Z",
+        "updatedAt": "2015-03-29T03:37:29.945Z",
+        "id": 3
+      },
+      {
+        "auth": 4,
+        "createdAt": "2015-03-29T03:37:35.148Z",
+        "updatedAt": "2015-03-29T03:37:35.148Z",
+        "id": 4
+      }
+    ]
   },
   "schema": {
     "date": {
@@ -801,13 +888,17 @@
     "timeline": {
       "id": 9
     },
-    "attempt": {},
+    "attempt": {
+      "id": 4
+    },
     "auth": {
-      "id": 1
+      "id": 4
     },
     "jwt": {},
     "resettoken": {},
     "use": {},
-    "user": {}
+    "user": {
+      "id": 4
+    }
   }
 }
