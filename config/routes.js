@@ -46,8 +46,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  // Timeline
-  'r|^/timeline/(\\d+)$|id': {
+  // Timeline embed
+  'r|^/embed/(\\d+)$|id': {
     view: 'timeline',
     /*locals: {
       id: req.param('id')
