@@ -26,67 +26,32 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  // '*': true,
-
-  /***************************************************************************
-  *                                                                          *
-  * Here's an example of mapping some policies to run before a controller    *
-  * and its actions                                                          *
-  *                                                                          *
-  ***************************************************************************/
-  // RabbitController: {
-
-    // Apply the `false` policy as the default for all of RabbitController's actions
-    // (`false` prevents all access, which ensures that nothing bad happens to our rabbits)
-    // '*': false,
-
-    // For the action `nurture`, apply the 'isRabbitMother' policy
-    // (this overrides `false` above)
-    // nurture  : 'isRabbitMother',
-
-    // Apply the `isNiceToAnimals` AND `hasRabbitFood` policies
-    // before letting any users feed our rabbits
-    // feed : ['isNiceToAnimals', 'hasRabbitFood']
-  // }
-
-  
-
-  '*': false, //['isLoggedIn'],
+  // Deny all by default
+  '*': false,
 
   AuthController: {
     'login': true
   },
 
-  // UserController: {
-  //   '*': true
-  // },
-  
-  DashboardController: {
-    // Must be loggedIn to view dashboard
-    '*': true
+  EventController: {
+    '*': false,
+    // Only loggedIn may create
+    'create': ['hasJWT'],
+    // Only owner may findOne/update/destroy
+    'findOne': ['hasJWT', 'belongsToUser'],
+    'update': ['hasJWT', 'belongsToUser'],
+    'destroy': ['hasJWT', 'belongsToUser']
   },
   
   TimelineController: {
-    // Blacklist
     '*': false,
     // Anyone can find individual
     'findOne': true,
     // Only loggedIn may create
-    'create': ['isLoggedIn'],
+    'create': ['hasJWT'],
     // Only owner may update/destroy
-    'update': ['isLoggedIn', 'belongsToUser'],
-    'destroy': ['isLoggedIn', 'belongsToUser']
-  },
-
-  EventController: {
-    // Blacklist
-    '*': false,
-    // Only loggedIn may create
-    'create': ['isLoggedIn'],
-    // Only owner may findOne/update/destroy
-    'findOne': ['isLoggedIn', 'belongsToUser'],
-    'update': ['isLoggedIn', 'belongsToUser'],
-    'destroy': ['isLoggedIn', 'belongsToUser']
+    'update': ['hasJWT', 'belongsToUser'],
+    'destroy': ['hasJWT', 'belongsToUser']
   },
 
   TestController: {
@@ -99,6 +64,7 @@ module.exports.policies = {
     restricted: ['sessionAuth'],
     open: true,
     jwt: ['hasJWT'],
+    user: ['hasJWT'],
   }
   
 };
