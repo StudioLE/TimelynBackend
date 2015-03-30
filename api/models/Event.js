@@ -10,18 +10,31 @@ module.exports = {
 	attributes: {
 
 		// TimelineJS data
-		startDate: 'date',
-		endDate: 'date',
-		headline: 'string',
+		startDate: {
+			type: 'date',
+			required: true,
+			date: true
+		},
+		endDate: {
+			type: 'date',
+			date: true
+		},
+		headline: {
+			type: 'string',
+			required: true
+		},
 		text: 'text',
-		tag: 'string', // Optional
-		classname: 'string', // Optional
-		asset: 'json', /*{
-			media: 'string',
-			thumbnail: 'string',
-			credit: 'string',
-			caption: 'string',
-		},*/
+		tag: 'string',
+		classname: 'string',
+		asset: {
+			type: 'json',
+			defaultsTo: {
+				"media": "",
+				"thumbnail": "",
+				"credit": "",
+				"caption": ""
+			}
+		},
 
 		// Sails associations
 		timeline: {

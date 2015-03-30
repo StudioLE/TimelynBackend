@@ -1,0 +1,48 @@
+[{
+  "headline": "Revolutionary User Interfaces",
+  "type": "default",
+  "text": "The human computer interface helps to define computing at any one time. As computers have become more mainstream the interfaces have become more intimate. This is the journey of computer technology and how it has come to touch all of our lives.",
+  "asset": {
+    "media": "http://timeline.knightlab.com/static/img/examples/user-interface/input.png",
+    "credit": "Arjuna Soriano",
+    "caption": "From punch cards to multi touch"
+  },
+  "era": [],
+  "user": 1
+},
+{
+  "headline": "Color Walk",
+  "type": "default",
+  "text": "At the end of the afternoon, the colors hung in our brains and eyes. We walked away seeing a world brimming over with colors: the rusty orange of a rooftop water tower in the sun, a bright blue mohawk, and the humble yellowy greens of a new leaf all jumped into our eyes.",
+  "asset": {
+    "media": "",
+    "credit": "Is this editable?",
+    "caption": "This lovely woman was happy to let us take a picture of her scarf, but she told us it would \"look better on someone else.\" We, of course, disagree."
+  },
+  "era": [],
+  "user": 1
+},
+{
+  "headline": "History of Ghana",
+  "type": "default",
+  "text": "<p>Intro body text goes here, some HTML is ok</p>",
+  "asset": {
+    "media": "http://lorempixel.com/500/400/",
+    "credit": "Credit Name Goes Here",
+    "caption": "Caption text goes here"
+  },
+  "era": [],
+  "user": 2
+},
+{
+  "headline": "Nelson Mandela's Extraordinary Life",
+  "type": "default",
+  "text": "<p>Intro body text goes here, some HTML is ok</p>",
+  "asset": {
+    "media": "http://lorempixel.com/500/400/",
+    "credit": "Credit Name Goes Here",
+    "caption": "Caption text goes here"
+  },
+  "era": [],
+  "user": 3
+}]

@@ -1,0 +1,190 @@
+[
+  {
+    "startDate": "1600-01-01T00:00:00.000Z",
+    "endDate": "",
+    "headline": "The Antikythera",
+    "text": "In the year 1900, sponge divers discovered the Antikythera Mechanism, a remarkable mechanical computer used to track the cycles of the solar system dated to as early as 89 B.C. There was no input however. All computations were carried out by the intricate system of clockwork like plates and wheels..",
+    "tag": "",
+    "classname": "",
+    "asset": {
+      "media": "",
+      "thumbnail": "https://www.youtube.com/watch?v=DiQSHiAYt98",
+      "credit": "<a href=\"http://www.nature.com/nature/videoarchive/index.html\">Nature Video Channel</a>",
+      "caption": ""
+    },
+    "timeline": 1
+  },
+  {
+    "startDate": "1946-12-10T00:00:00.000Z",
+    "endDate": "",
+    "headline": "ENIAC",
+    "text": "<p>Weighing 30 tons, and containing over 18,000 vacuum tubes, the ENIAC was the first truly modern computer. It could be programmed for many complex programs and used an early keyboard as its input.</p>",
+    "tag": "",
+    "classname": "",
+    "asset": {
+      "media": "http://upload.wikimedia.org/wikipedia/commons/1/16/Classic_shot_of_the_ENIAC.jpg",
+      "thumbnail": "",
+      "credit": "U.S. Army photo",
+      "caption": "\"Cpl. Irwin Goldstein (foreground) sets the switches on one of the ENIAC's function tables at the Moore School of Electrical Engineering.\" (Caption via Wikimedia)"
+    },
+    "timeline": 1
+  },
+  {
+    "startDate": "1951-12-10T00:00:00.000Z",
+    "endDate": "1964-12-11T00:00:00.000Z",
+    "headline": "UNICVAC I",
+    "text": "<p>The Universal Automatic Computer I weighed in at 13 tons and sold for over one million dollars. It was the first mass produced computer, selling 46 units. The massive cockpit of a console featured a keyboard</p>",
+    "tag": "",
+    "classname": "",
+    "asset": {
+      "media": "http://upload.wikimedia.org/wikipedia/commons/5/55/Museum_of_Science%2C_Boston%2C_MA_-_IMG_3163.JPG",
+      "thumbnail": "",
+      "credit": "By Daderot (Own work) [Public domain], via Wikimedia Commons",
+      "caption": "Input for the UNIVAC I was via keyboard in this massive input console."
+    },
+    "timeline": 1
+  },
+  {
+    "startDate": "1964-12-10T00:00:00.000Z",
+    "endDate": "2011-12-11T00:00:00.000Z",
+    "headline": "Multics",
+    "text": "<p>A collaboration between MIT, Bell Laboratories and General Electric created the Multics system. It was a multi-user, time sharing system that spurred along the use of a new interface, a monitor.</p>",
+    "tag": "",
+    "classname": "",
+    "asset": {
+      "media": "",
+      "thumbnail": "",
+      "credit": "",
+      "caption": ""
+    },
+    "timeline": 1
+  },
+  {
+    "startDate": "1968-01-01T00:00:00.000Z",
+    "endDate": null,
+    "headline": "Minicomputer",
+    "text": "Data General introduces the Nova Minicomputer which served as an inspiration for Steve Wozniak's design of the Apple I.",
+    "tag": "",
+    "classname": "",
+    "asset": {
+      "media": "http://upload.wikimedia.org/wikipedia/commons/7/7f/Data_General_Nova_SN_1.agr.JPG",
+      "thumbnail": "",
+      "credit": "By Arnold Reinhold, via Wikimedia Commons",
+      "caption": "he first Data General Nova minicomputer displayed at the Computer History Museum in Silicon Valley."
+    },
+    "timeline": 1
+  },
+  {
+    "startDate": "2011-12-10T00:00:00.000Z",
+    "endDate": "2011-12-11T00:00:00.000Z",
+    "headline": "Headline Goes Here",
+    "text": "<p>Body text goes here, some HTML is OK</p>",
+    "tag": "This is Optional",
+    "classname": "optionaluniqueclassnamecanbeaddedhere",
+    "asset": {
+      "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+      "thumbnail": "http://lorempixel.com/32/32/",
+      "credit": "Credit Name Goes Here",
+      "caption": "Caption text goes here"
+    },
+    "timeline": 2
+  },
+  {
+    "startDate": "2011-12-10T00:00:00.000Z",
+    "endDate": "2011-12-11T00:00:00.000Z",
+    "headline": "Hmmm",
+    "text": "<p>Body text goes here, some HTML is OK</p>",
+    "tag": "This is Optional",
+    "classname": "optionaluniqueclassnamecanbeaddedhere",
+    "asset": {
+      "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+      "thumbnail": "http://lorempixel.com/32/32/",
+      "credit": "Credit Name Goes Here",
+      "caption": "Caption text goes here"
+    },
+    "timeline": 2
+  },
+  {
+    "startDate": "2011-12-10T00:00:00.000Z",
+    "endDate": "2011-12-11T00:00:00.000Z",
+    "headline": "Headline Goes Here",
+    "text": "<p>Body text goes here, some HTML is OK</p>",
+    "tag": "This is Optional",
+    "classname": "optionaluniqueclassnamecanbeaddedhere",
+    "asset": {
+      "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+      "thumbnail": "http://lorempixel.com/32/32/",
+      "credit": "Credit Name Goes Here",
+      "caption": "Caption text goes here"
+    },
+    "timeline": 3
+  },
+  {
+    "startDate": "2011-12-10T00:00:00.000Z",
+    "endDate": "2011-12-11T00:00:00.000Z",
+    "headline": "Headline Goes Here",
+    "text": "<p>Body text goes here, some HTML is OK</p>",
+    "tag": "This is Optional",
+    "classname": "optionaluniqueclassnamecanbeaddedhere",
+    "asset": {
+      "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+      "thumbnail": "http://lorempixel.com/32/32/",
+      "credit": "Credit Name Goes Here",
+      "caption": "Caption text goes here"
+    },
+    "timeline": 4
+  },
+  {
+    "startDate": "2011-12-10T00:00:00.000Z",
+    "endDate": "2011-12-11T00:00:00.000Z",
+    "headline": "Headline Goes Here",
+    "text": "<p>Body text goes here, some HTML is OK</p>",
+    "tag": "This is Optional",
+    "classname": "optionaluniqueclassnamecanbeaddedhere",
+    "asset": {
+      "media": "http://twitter.com/ArjunaSoriano/status/164181156147900416",
+      "thumbnail": "http://lorempixel.com/32/32/",
+      "credit": "Credit Name Goes Here",
+      "caption": "Caption text goes here"
+    },
+    "timeline": 3
+  },
+  {
+    "startDate": "1642-01-01T00:00:00.000Z",
+    "headline": "Pascal's Calculator",
+    "text": "<p>Blaise Pascal invented this calculator to help his father reorganize the French tax system. It could add and subtract in one step and multiply and divide by repetition.</p><p>Input was achieved by spinning the little wheels: inspiration for the iPod click wheel?</p>",
+    "asset": {
+      "media": "http://timeline.knightlab.com/examples/user-interface/static/img/examples/user-interface/pascaline.jpg",
+      "credit": "© 2005 <a href=\"http://commons.wikimedia.org/wiki/User:David.Monniaux\">David Monniaux</a>",
+      "caption": "This piece is on display at MusÃ©e des Arts et MÃ©tiers, Paris."
+    },
+    "timeline": 1
+  },
+  {
+    "startDate": "1820-01-01T00:00:00.000Z",
+    "headline": "Thomas Arithometer",
+    "text": "This is the first mass-produced calculator that could add, subtract, multiply and divide. Numbers were  input with all of the little knobs and dials and then the handle was twisted to perform the calculation.",
+    "asset": {
+      "media": "http://upload.wikimedia.org/wikipedia/commons/5/59/Arithmometre.jp",
+      "credit": "By <a href=\"http://commons.wikimedia.org/wiki/File%3AArithmometre.jpg\">Ezrdr</a>, via Wikimedia Commons"
+    },
+    "timeline": 1
+  },
+  {
+    "startDate": "1801-01-01T00:00:00.000Z",
+    "headline": "Jacquard Loom",
+    "text": "A loom is not a computer. It is the first machine however to use punch-cards as a means of input into a machine. By changing the arrangement of the holes in the card, the loom would weave different patterns.",
+    "asset": {
+      "caption": "The Jacquard loom is still in use today in modern factories. The punch-cards can be clearly seen being pulled to the top of the loom.",
+      "media": "http://youtu.be/2ypE4ZJF7qY",
+      "credit": "<a href='http://www.youtube.com/user/FiberMusings'>FiberMusings</a>"
+    },
+    "timeline": 1
+  },
+  {
+    "startDate": "2012-05-19T23:00:00.000Z",
+    "headline": "Blue: Chipping nails",
+    "text": "This girl was crossing one corner while we were mid-crosswalk headed the other way. Her blues prompted a quick sprint.",
+    "timeline": 8
+  }
+]

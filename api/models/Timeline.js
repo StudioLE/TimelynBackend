@@ -10,7 +10,10 @@ module.exports = {
 	attributes: {
 
 		// TimelineJS data
-		headline: 'string',
+		headline: {
+			type: 'string',
+			required: true
+		},
 		type: { 
 			type: 'string',
 			defaultsTo: 'default'
