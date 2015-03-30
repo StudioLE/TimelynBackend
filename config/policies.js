@@ -54,12 +54,12 @@ module.exports.policies = {
   '*': false, //['isLoggedIn'],
 
   AuthController: {
-    '*': true
+    'login': true
   },
 
-  UserController: {
-    '*': true
-  },
+  // UserController: {
+  //   '*': true
+  // },
   
   DashboardController: {
     // Must be loggedIn to view dashboard
@@ -97,7 +97,8 @@ module.exports.policies = {
     // 'update': true,
     // 'destroy': true
     restricted: ['sessionAuth'],
-    open: true
+    open: true,
+    jwt: ['hasJWT'],
   }
   
 };

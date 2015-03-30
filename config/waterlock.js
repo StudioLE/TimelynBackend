@@ -90,7 +90,7 @@ module.exports.waterlock = {
       // obj - {controller: 'blog', action: 'post'}
       // string - 'custom json response string'
       // default - 'default'
-      success: 'default',
+      success: 'jwt',
 
      // Auth isn't going to work until Waterlock merges PR #41
      // https://github.com/waterlock/waterlock/pull/41
