@@ -36,7 +36,7 @@ module.exports.policies = {
   EventController: {
     '*': false,
     // Only loggedIn may create
-    'create': ['hasJWT'],
+    'create': ['hasJWT', 'assignToUser'],
     // Only owner may findOne/update/destroy
     'findOne': ['hasJWT', 'belongsToUser'],
     'update': ['hasJWT', 'belongsToUser'],
@@ -48,7 +48,7 @@ module.exports.policies = {
     // Anyone can find individual
     'findOne': true,
     // Only loggedIn may create
-    'create': ['hasJWT'],
+    'create': ['hasJWT', 'assignToUser'],
     // Only owner may find-all/update/destroy
     'find': ['hasJWT', 'belongsToUser'],
     'update': ['hasJWT', 'belongsToUser'],
