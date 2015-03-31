@@ -17,21 +17,6 @@ module.exports = {
 
   jwt: function(req, res){
     return res.ok("Cor blimey guvnor. This finally works!");
-  },
-
-  user: function(req, res){
-    user = req.session.user
-    console.log(user)
-
-    return res.ok(user)
-    // var token = waterlock._utils.allParams(req).access_token
-    // console.log(token)
-    // waterlock.validator.findUserFromToken(token, function(err, user) {
-    //   if(err) console.error(err)
-
-    //   console.log(user)
-    //   return res.ok(user)
-    // })
   }
   
 };

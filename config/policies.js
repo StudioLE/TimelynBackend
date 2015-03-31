@@ -63,8 +63,15 @@ module.exports.policies = {
     // 'destroy': true
     restricted: ['sessionAuth'],
     open: true,
-    jwt: ['hasJWT'],
-    user: ['hasJWT'],
+    jwt: ['hasJWT']
+  },
+
+  UserController: {
+    '*': false,
+    // Anyone can register
+    register: true,
+    // Only loggedIn may fetch themselves
+    current: ['hasJWT']
   }
   
 };

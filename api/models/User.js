@@ -13,6 +13,7 @@ module.exports = {
     username: {
       type: 'string',
       required: true,
+      unique: true,
       alphanumericdashed: true
     },
     name: {
