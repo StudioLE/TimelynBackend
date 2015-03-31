@@ -12,6 +12,7 @@ var p = require('path')
  * > sails.controllers.data.insert('timeline')
  * > sails.controllers.data.insert('event')
  * > sails.controllers.data.insert('user')
+ * > sails.controllers.data.insert('all')
  */
 
 module.exports = {
@@ -21,6 +22,11 @@ module.exports = {
       this.insertToModel(model_id)
     }
     else if(model_id === 'user') {
+      this.registerNewUsers()
+    }
+    else if(model_id === 'all') {
+      this.insertToModel('timeline')
+      this.insertToModel('event')
       this.registerNewUsers()
     }
     else {
