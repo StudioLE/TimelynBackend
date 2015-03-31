@@ -29,19 +29,20 @@ module.exports = require('waterlock').actions.user({
    * @return {Object} jwt
    */
   register: function(req, res) {
-    var data = req.params
+    var data = req.body
 
     sails.models['user'].create(data, function(err, user) {
       if(err) {
-        console.log(err)
-        return false
+        return res.badRequest(err)
       }
       waterlock.engine.attachAuthToUser({
         email: data.email,
         password: data.password
       }, user, function(err, user) {
-        console.log('Added user ' + user.name)
-        // Now return JWT
+        sails.log('Added user ' + user.name)
+        // waterlock loginSuccess will log the user in then apply the 
+        // post login event defined in config/waterlock.js 
+        waterlock.cycle.loginSuccess(req, res, user)
       })
     })
   }
