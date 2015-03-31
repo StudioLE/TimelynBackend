@@ -9,9 +9,20 @@
  */
 module.exports = function(req, res, next) {
 
-  // User is allowed, proceed to the next policy, 
-  // or if this is the last policy, the controller
-  if (req.user) {
+  // Add access_token to criteria blacklist
+  // Not necessary if overriding where
+  // @todo add blacklist to hasJSON
+  // https://github.com/balderdashy/sails/blob/master/lib/hooks/blueprints/actionUtil.js
+  // parseCriteria: function ( req )
+  // req.options.criteria.blacklist =  ['limit', 'skip', 'sort', 'populate', 'access_token']
+
+  if(req.session.user.id) {
+    // Add user id as a where parameter
+    // Only match rows with the user id
+    req.query.where = {
+      user: req.session.user.id
+    }
+    // Proceed to the next policy, or if this is the last policy, the controller
     return next();
   }
 

@@ -49,7 +49,8 @@ module.exports.policies = {
     'findOne': true,
     // Only loggedIn may create
     'create': ['hasJWT'],
-    // Only owner may update/destroy
+    // Only owner may find-all/update/destroy
+    'find': ['hasJWT', 'belongsToUser'],
     'update': ['hasJWT', 'belongsToUser'],
     'destroy': ['hasJWT', 'belongsToUser']
   },
