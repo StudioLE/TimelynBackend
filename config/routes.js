@@ -48,7 +48,10 @@ module.exports.routes = {
 
   // Timeline embed
   'r|^/embed/(\\d+)$|id': {
-    view: 'timeline',
+    view: 'timeline/timeline-ajax',
+    locals: {
+      layout: 'timeline/timeline-layout'
+    }
     /*locals: {
       id: req.param('id')
     }*/
