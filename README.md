@@ -70,18 +70,17 @@ Analytics
 
 - [ ] As much as I enjoy the command line a graphical interface could be useful, particularly for analytics.
 
+
 ## Source
 
 Timelyn is 100% javascript, the backend is a RESTful API powered by [Sails.js](http://sailsjs.org), the frontend is [AngularJS](https://angularjs.org) with authentication via JSON web tokens.
 
 Frontend: [timelyn.io](https://timelyn.io)
-
 Backend: [app.timelyn.io](https://app.timelyn.io)
+
 
 ## Contributing
 
 I'm always on the look out for collaborators so feel free to suggest new features, get in touch or just fork at will.
 
-### Install
-
-To install the backend clone the repository, modify the config files to suit your environment then follow the getting started information in the [sails documentation](https://github.com/balderdashy/sails-docs/blob/master/getting-started/getting-started.md).
+Installation instructions for both the frontend and backend are available in [INSTALL.md](https://github.com/StudioLE/TimelynBackend/edit/master/INSTALL.md)
