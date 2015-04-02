@@ -29,7 +29,7 @@ Behind the scenes this will also call `bower install`.
 You now need to modify the `app_url` config setting in `app/config.js`. This is the domain of your timelyn backend which will probably be:
 
 ```
-app_url: 'http://localhost:7425',
+app_url: 'http://localhost:1337',
 ```
 
 The frontend is now ready. To reach it you can either point your webserver to the directory:
