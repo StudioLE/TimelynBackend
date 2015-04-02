@@ -154,7 +154,7 @@
     "headline": "Pascal's Calculator",
     "text": "<p>Blaise Pascal invented this calculator to help his father reorganize the French tax system. It could add and subtract in one step and multiply and divide by repetition.</p><p>Input was achieved by spinning the little wheels: inspiration for the iPod click wheel?</p>",
     "asset": {
-      "media": "http://timeline.knightlab.com/examples/user-interface/static/img/examples/user-interface/pascaline.jpg",
+      "media": "http://embed.timelyn.io/john/img/1.jpg",
       "credit": "© 2005 <a href=\"http://commons.wikimedia.org/wiki/User:David.Monniaux\">David Monniaux</a>",
       "caption": "This piece is on display at MusÃ©e des Arts et MÃ©tiers, Paris."
     },
