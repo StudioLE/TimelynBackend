@@ -11,6 +11,17 @@
 module.exports = require('waterlock').actions.user({
   
   /**
+   * Guest check
+   *
+   * @param {Object} req
+   * @param {Object} res
+   * @return {String}
+   */
+  guest: function(req, res) {
+    return res.ok('Hello world')
+  },
+  
+  /**
    * Current user getter
    *
    * @param {Object} req

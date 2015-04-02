@@ -69,8 +69,9 @@ module.exports.policies = {
 
   UserController: {
     '*': false,
-    // Anyone can register
+    // Anyone can register or check guest
     register: true,
+    guest: true,
     // Only loggedIn may fetch themselves
     current: ['hasJWT']
   }
