@@ -42,6 +42,17 @@ module.exports.policies = {
     'update': ['hasJWT', 'belongsToUser'],
     'destroy': ['hasJWT', 'belongsToUser']
   },
+
+  MediaController: {
+    '*': false,
+    // Only loggedIn may create/upload
+    'create': ['hasJWT', 'assignToUser'],
+    'upload': ['hasJWT', 'assignToUser'],
+    // Only owner may findOne/update/destroy
+    'findOne': ['hasJWT', 'belongsToUser'],
+    'update': ['hasJWT', 'belongsToUser'],
+    'destroy': ['hasJWT', 'belongsToUser']
+  },
   
   TimelineController: {
     '*': false,

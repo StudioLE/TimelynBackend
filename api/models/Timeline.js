@@ -39,7 +39,11 @@ module.exports = {
 		date: {
 			collection: 'event',
 			via: 'timeline'
-		}
+		},
+		// asset: {
+		// 	collection: 'media',
+		// 	via: 'timeline'
+		// }
 	}
 };
 
