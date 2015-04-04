@@ -80,13 +80,25 @@ module.exports.connections = {
     user: 'YOUR_POSTGRES_USER',
     password: 'YOUR_POSTGRES_PASSWORD',
     database: 'YOUR_POSTGRES_DB'
-  }
+  },
 
+
+  /***************************************************************************
+  *                                                                          *
+  * AWS Simple Storage Service                                               *
+  *                                                                          *
+  ***************************************************************************/
+  s3: {
+    key: 'YOUR_S3_ACCESS_KEY_ID',
+    secret: 'YOUR_S3_SECRET_ACCESS_KEY',
+    bucket: 'YOUR_S3_BUCKET'
+  }
 
   /***************************************************************************
   *                                                                          *
   * More adapters: https://github.com/balderdashy/sails                      *
   *                                                                          *
   ***************************************************************************/
+
 
 };

@@ -59,9 +59,9 @@ module.exports = {
           //   cb(null,  name + p.extname(stream.filename))
           // },
           adapter: require('skipper-s3'),
-          key: sails.config.connections.s3.accessKeyId,
-          secret: sails.config.connections.s3.secretAccessKey,
-          bucket: sails.config.connections.s3.bucketName,
+          key: sails.config.connections.s3.key,
+          secret: sails.config.connections.s3.secret,
+          bucket: sails.config.connections.s3.bucket,
         }, function (err, files) {
           if(err){
             cb(err)

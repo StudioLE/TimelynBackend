@@ -65,13 +65,16 @@ module.exports = {
     var Publish = this
 
     var client = s3.createClient({
-      s3Options: sails.config.connections.s3
+      s3Options: {
+        accessKeyId: sails.config.connections.s3.key,
+        secretAccessKey: sails.config.connections.s3.secret
+      }
     })
 
     var uploader = client.uploadFile({
       localFile: this.file.path,
       s3Params: {
-        Bucket: 'timelynio',
+        Bucket: sails.config.connections.s3.bucket,
         Key: p.join('embed', this.file.key),
         ContentType: 'text/html'
       },
