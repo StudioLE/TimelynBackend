@@ -19,14 +19,6 @@ module.exports = {
 			defaultsTo: 'default'
 		},
 		text: 'text',
-		asset: {    
-			type: 'json',
-			defaultsTo: {
-				"media": "",
-				"credit": "",
-				"caption": ""
-			}
-		},
 		era: {  
 			type: 'array',
 			defaultsTo: []
@@ -40,10 +32,10 @@ module.exports = {
 			collection: 'event',
 			via: 'timeline'
 		},
-		// asset: {
-		// 	collection: 'media',
-		// 	via: 'timeline'
-		// }
+		asset: {
+			collection: 'media',
+			via: 'timeline'
+		}
 	}
 };
 

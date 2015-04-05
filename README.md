@@ -39,17 +39,34 @@ About
 
 ### Application
 
+UI/UX Overhaul
+- [x] Create timeline
+  - [x] Timeline preview
+  - [x] Integrated image upload
+  - [x] Image preview
+- [ ] Edit timeline
+- [ ] Create Event
+- [ ] Edit event
+
+Integrate Action.error() / Alert.set()
+- [ ] Delete timeline
+- [ ] Publish timeline
+- [ ] Login
+- [ ] Register
+
+
 Timelines
 - [ ] Additional settings defined in embed code
 - [ ] Save draft timelines
-- [ ] Refine embed script 
+- [ ] Refine embed script
 - [ ] Present embed code to user
 - [ ] Publish button + logic
 
 Media attachments 
-- [ ] Create model + controller with relationship to event/timeline
-- [ ] Direct browser upload to cloudinary/imgur/s3
+- [x] Create model + controller with relationship to event/timeline
+- [x] Direct browser upload to s3
 - [ ] Automate thumbnail creation
+- [ ] Image resize + compression
 
 User settings
 - [ ] Change name / email / password

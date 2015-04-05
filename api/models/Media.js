@@ -14,6 +14,10 @@ module.exports = {
       type: 'string',
       required: true
     },
+    type: {
+      type: 'string',
+      required: true
+    },
     thumbnail: 'string',
     credit: 'string',
     caption: 'string',
