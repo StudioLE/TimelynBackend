@@ -48,6 +48,8 @@ module.exports = {
         else {
           // Close the upstream pipe. This should surpress verbose EMAXBUFFER log but doesn't..
           upload.unpipe()
+
+          // @todo Return errors with E_VALIDATION
           cb('Failed validation', errors)
         }
       },
@@ -78,11 +80,16 @@ module.exports = {
       },
       function(files, cb) { // Add to model
         // @todo Auto generate thumbnail
+        // @todo Compress/resize image
         data = req.params.all()
-        _.extend(data, {
-          media: files[0].fd
-        })
-        Media.create(data, function(err, items) {
+        Media.create({
+          type: 'upload',
+          media: files[0].fd,
+          timeline: data.timeline,
+          user: data.user,
+          credit: data.credit,
+          caption: data.caption
+        }, function(err, items) {
           if(err) cb(err)
           cb(null, items)
         })

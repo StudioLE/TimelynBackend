@@ -22,14 +22,19 @@ module.exports = {
       .exec(function(err, timeline) {
         if(err) throw err
         if( ! timeline) return res.notFound()
+        var asset = timeline.asset[0]
+        if(asset && asset.type == 'upload') {
+          // @todo Better method of extracting embed url from upload key
+          asset.media = 'http://embed.timelyn.io' + asset.media.substr(6)
+        }
         return res.json({
           id: timeline.id,
           headline: timeline.headline,
           text: timeline.text,
           type: timeline.type,
-          asset: timeline.asset[0],
+          asset: asset,
           date: timeline.date,
-          era: timeline.era,
+          era: timeline.era
         })
       })
   }
