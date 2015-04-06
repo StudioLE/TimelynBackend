@@ -56,23 +56,17 @@ module.exports.policies = {
   
   TimelineController: {
     '*': false,
-    // Anyone can find individual
-    'findOne': true,
     // Only loggedIn may create
     'create': ['hasJWT', 'assignToUser'],
-    // Only owner may find-all/update/destroy
+    // Only owner may find/update/destroy
+    'json': ['hasJWT', 'belongsToUser'],
     'find': ['hasJWT', 'belongsToUser'],
+    'findOne': ['hasJWT', 'belongsToUser'],
     'update': ['hasJWT', 'belongsToUser'],
     'destroy': ['hasJWT', 'belongsToUser']
   },
 
   TestController: {
-    // '*': ['isLoggedIn', 'belongsToUser'],
-    // 'find': true,
-    // 'findOne': true,
-    // 'create': true,
-    // 'update': true,
-    // 'destroy': true
     restricted: ['sessionAuth'],
     open: true,
     jwt: ['hasJWT']
