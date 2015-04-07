@@ -19,22 +19,38 @@ module.exports = {
   timeline: {},
   file: {},
 
+  /**
+   * Get timeline
+   *
+   * @param {Integer} timeline id
+   * @param {Function} callback
+   * @return void
+   */
   getTimeline: function(id, callback) {
     var Publish = this
     var model = sails.models['timeline']
+    var format = sails.controllers['timeline'].formatV2
 
     model.findOne(id)
       .populate('user')
       .populate('date')
+      .populate('asset')
       .exec(function(err, timeline) {
         if(err) callback(err)
         Publish.user = timeline.user
         delete timeline.user
-        Publish.timeline = timeline
+        Publish.timeline = format(timeline)
         callback(null, Publish.timeline)
       })
   },
 
+  /**
+   * Get timeline
+   *
+   * @param {Integer} timeline id
+   * @param {Function} callback
+   * @return void
+   */
   render: function(partial, locals, callback) {
     var ejs = sails.hooks.http.app
 
@@ -44,13 +60,22 @@ module.exports = {
     })
   },
 
+  /**
+   * Write timeline embed file locally
+   *
+   * @param {String} html
+   * @param {Function} callback
+   * @return void
+   */
   save: function(html, callback) {
     var Publish = this
+
+    // @todo Write directly to S3. We don't need a local version
     this.file.dir = p.join(__dirname, '../../../published', this.user.username)
     this.file.name = this.timeline.id.toString()
     this.file.path = p.join(this.file.dir, this.file.name)
     this.file.key = p.join(this.user.username, this.file.name)
-    
+
     fs.mkdir(Publish.file.dir, function(err) {
       if(err && err.code !== 'EEXIST') callback(err)
       fs.writeFile(Publish.file.path, html, function(err) {
@@ -61,6 +86,12 @@ module.exports = {
     })
   },
 
+  /**
+   * Write timeline embed file to S3
+   *
+   * @param {Function} callback
+   * @return void
+   */
   publish: function(callback) {
     var Publish = this
 
@@ -87,6 +118,12 @@ module.exports = {
     })
   },
 
+  /**
+   * Publish timeline embed file
+   *
+   * @param {Integer} timeline id
+   * @return {Object} timeline
+   */
   execute: function(id) {
     var Publish = this
 
@@ -126,7 +163,7 @@ module.exports = {
         throw err
       }
       else {
-        console.log('Success') 
+        console.log('Success')
       }
     })
   }
