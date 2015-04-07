@@ -10,19 +10,19 @@ var p = require('path')
 module.exports = {
   file: {},
 
-
-
+  /**
+   * Upload media
+   *
+   * Upload a media file and create a Media entry
+   *
+   * @param {Object} req
+   * @param {Object} res
+   * @return {Object} res
+   */
   upload: function(req, res) {
     // @todo Get timeline + event from request
-    var event = {
-      id: 13,
-      timeline: 3
-    }
-
     var user = req.session.user.username.toString()
-    var timeline = event.timeline.toString()
-    var name = event.id.toString()
-    var dir = p.join('/embed', user, 'img', timeline)
+    var dir = p.join('/embed', user, 'img')
 
     async.waterfall([
       function(cb) { // Validate
@@ -58,7 +58,7 @@ module.exports = {
           maxBytes: 7.5 * 1000 * 1000, // 7.5 MB
           dirname: dir,
           // saveAs: function(stream, cb) {
-          //   cb(null,  name + p.extname(stream.filename))
+          //   cb(null,  event.id.toString() + p.extname(stream.filename))
           // },
           adapter: require('skipper-s3'),
           key: sails.config.connections.s3.key,
@@ -85,7 +85,6 @@ module.exports = {
         Media.create({
           type: 'upload',
           media: files[0].fd,
-          timeline: data.timeline,
           user: data.user,
           credit: data.credit,
           caption: data.caption
