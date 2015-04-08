@@ -26,15 +26,6 @@ module.exports = {
 		text: 'text',
 		tag: 'string',
 		classname: 'string',
-		// asset: {
-		// 	type: 'json',
-		// 	defaultsTo: {
-		// 		"media": "",
-		// 		"thumbnail": "",
-		// 		"credit": "",
-		// 		"caption": ""
-		// 	}
-		// },
 
 		// Sails associations
 		user: {
@@ -44,8 +35,7 @@ module.exports = {
 			model: 'timeline'
 		},
 		asset: {
-			collection: 'media',
-			via: 'event'
+			model: 'media'
 		}
 	}
 };

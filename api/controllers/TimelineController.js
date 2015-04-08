@@ -32,46 +32,122 @@ module.exports = {
       .exec(function(err, timeline) {
         if(err) throw err
         if( ! timeline) return res.notFound()
-        return res.json(self.formatV2(timeline))
+
+        // Array of event media ids to fetch
+        event_media = _.pluck(timeline.date, 'asset')
+        // @todo Check what happens if asset = null
+
+        Media.find({id: event_media}).exec(function(err, media) {
+          if(err) throw err
+          if( ! media) return res.serverError()
+
+          // Index media by id
+          media = _.indexBy(media, 'id')
+
+          // Get a plain object version
+          timeline = timeline.toObject()
+
+          // Populate timeline.date[n]asset with it's media object
+          timeline.date = _.map(timeline.date, function(event) {
+            // Take the opportunity to prepend embedUrl
+            event.asset = self.embedUrl(media[event.asset])
+            return event
+          })
+
+          return res.json(self.formatV2(timeline))
+
+        })
       })
   },
 
   /**
-   * Format timeline v2
-   *
-   * Format a timeline for use with Timeline JS v2
+   * Format for Timeline JS v2
    *
    * @param {Object} timeline
    * @return {Object} timeline v2
    */
   formatV2: function(timeline) {
-    var asset = timeline.asset[0]
-    if(asset && asset.type == 'upload') {
-      // @todo Better method of extracting embed url from upload key
-      asset.media = 'http://embed.timelyn.io' + asset.media.substr(6)
-    }
-
     return {
       id: timeline.id,
       headline: timeline.headline,
       text: timeline.text,
       type: timeline.type,
-      asset: asset,
+      asset: this.embedUrl(timeline.asset),
       date: timeline.date,
       era: timeline.era
     }
   },
 
   /**
-   * Format timeline v3
-   *
-   * Format a timeline for use with Timeline JS v3
+   * Format for TimelineJS v3
    *
    * @param {Object} timeline
    * @return {Object} timeline v3
    */
   formatV3: function(timeline) {
-    return false
+    // The data file should be in JSON format with the following structure
+    // via https://github.com/NUKnightLab/TimelineJS3#data-file
+
+    return {
+      "title": {
+        "media": {
+          "caption":  "",
+          "credit":   "",
+          "url":      "url_to_your_media.jpg",
+          "thumb":    "url_to_your_media.jpg"
+        },
+        "text": {
+          "headline": "Headline Goes Here",
+          "text":     "Your slide text goes here."
+        }
+      },
+      "events": [{
+        "start_date": {
+          "year":         "1900",
+          "month":        "01",
+          "day":          "05",
+          "hour":         "",
+          "minute":       "",
+          "second":       "",
+          "millisecond":  "",
+          "format":       ""
+        },
+        "end_date": {
+          "year":         "1900",
+          "month":        "06",
+          "day":          "07",
+          "hour":         "",
+          "minute":       "",
+          "second":       "",
+          "millisecond":  "",
+          "format":       ""
+        },
+        "media": {
+          "caption":  "",
+          "credit":   "",
+          "url":      "url_to_your_media.jpg",
+          "thumb":    "url_to_your_media.jpg"
+        },
+        "text": {
+          "headline": "Headline Goes Here",
+          "text":     "Your slide text goes here."
+        }
+      }]
+    }
+  },
+
+  /**
+   * Prepend embed url to upload keys
+   *
+   * @param {Object} asset
+   * @return {Object} asset
+   */
+  embedUrl: function(asset) {
+    if(asset && asset.type == 'upload') {
+      // @todo Better method of extracting embed url from upload key
+      asset.media = 'http://embed.timelyn.io' + asset.media.substr(6)
+    }
+    return asset
   }
 
 };

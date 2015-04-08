@@ -33,8 +33,7 @@ module.exports = {
 			via: 'timeline'
 		},
 		asset: {
-			collection: 'media',
-			via: 'timeline'
+			model: 'media'
 		}
 	}
 };
