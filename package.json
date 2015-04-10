@@ -29,6 +29,7 @@
     "sails-mysql": "^0.10.11",
     "skipper-s3": "^0.5.5",
     "validator": "^3.33.0",
+    "watchkeep": "0.0.1",
     "waterlock": "0.0.14",
     "waterlock-local-auth": "0.0.5"
   },
