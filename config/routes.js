@@ -22,6 +22,12 @@
 
 module.exports.routes = {
 
+  // Log all requests
+  '/*': function(req, res, next) {
+    sails.log.info(req.method, req.path)
+    next()
+  },
+
   /***************************************************************************
   *                                                                          *
   * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
