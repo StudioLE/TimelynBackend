@@ -45,15 +45,13 @@ module.exports = {
   },
 
   /**
-   * JSON Response
-   *
    * Get timeline, format and return
    *
    * @param {Object} req
    * @param {Object} res
    * @return {Object} res
    */
-  json: function(req, res) {
+  format: function(req, res) {
     var self = this
 
     if( ! _.isFinite(req.param('id'))) {
@@ -61,7 +59,7 @@ module.exports = {
     }
 
     Timeline.findOne({
-      id: req.params.id,
+      id: req.param('id'),
       user: req.session.user.id
     })
       .populate('date')
@@ -91,8 +89,10 @@ module.exports = {
             return event
           })
 
-          return res.json(self.formatV2(timeline))
-
+          if(req.param('version') === 3)
+            return res.json(self.formatV3(timeline))
+          else
+            return res.json(self.formatV2(timeline))
         })
       })
   },

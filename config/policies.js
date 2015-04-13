@@ -59,7 +59,7 @@ module.exports.policies = {
     // Only loggedIn may create
     'create': ['hasJWT', 'assignToUser'],
     // Only owner may find/update/destroy
-    'json': ['hasJWT', 'belongsToUser'],
+    'format': ['hasJWT', 'belongsToUser'],
     'find': ['hasJWT', 'belongsToUser'],
     'findOne': ['hasJWT', 'belongsToUser'],
     'update': ['hasJWT', 'belongsToUser'],
