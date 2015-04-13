@@ -8,6 +8,43 @@
 module.exports = {
 
   /**
+   * Publish timeline
+   *
+   * @param {Object} req
+   * @param {Object} res
+   * @return {Object} res
+   */
+  publish: function(req, res) {
+    var self = this
+    var Publish = sails.controllers.publish
+
+    if( ! _.isFinite(req.param('id'))) {
+      return res.forbidden('You do not have permission to do that')
+    }
+
+    console.log(req.param('id'), req.session.user.id)
+
+    Timeline.findOne({
+      id: req.param('id'),
+      user: req.session.user.id
+    })
+    .exec(function(err, timeline) {
+      if(err) throw err
+      if( ! timeline) return res.notFound()
+
+      Publish.execute(req.param('id'), function(err, key) {
+        if(err) throw err
+        return res.json({
+          id: timeline.id,
+          headline: timeline.headline,
+          status: 'success',
+          path: key 
+        })
+      })
+    })
+  },
+
+  /**
    * JSON Response
    *
    * Get timeline, format and return

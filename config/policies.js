@@ -63,7 +63,8 @@ module.exports.policies = {
     'find': ['hasJWT', 'belongsToUser'],
     'findOne': ['hasJWT', 'belongsToUser'],
     'update': ['hasJWT', 'belongsToUser'],
-    'destroy': ['hasJWT', 'belongsToUser']
+    'destroy': ['hasJWT', 'belongsToUser'],
+    'publish': ['hasJWT'] // belongsToUser is performed within the controller
   },
 
   TestController: {

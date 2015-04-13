@@ -28,8 +28,8 @@ module.exports = {
    */
   getTimeline: function(id, callback) {
     var Publish = this
-    var model = sails.models['timeline']
-    var format = sails.controllers['timeline'].formatV2
+    var model = sails.models.timeline
+    var format = sails.controllers.timeline.formatV2
 
     model.findOne(id)
       .populate('user')
@@ -67,7 +67,7 @@ module.exports = {
    * @param {Function} callback
    * @return void
    */
-  save: function(html, callback) {
+  write: function(html, callback) {
     var Publish = this
 
     // @todo Write directly to S3. We don't need a local version
@@ -80,7 +80,7 @@ module.exports = {
       if(err && err.code !== 'EEXIST') callback(err)
       fs.writeFile(Publish.file.path, html, function(err) {
         if(err) callback(err)
-        sails.log('Saved embed file', Publish.file.key)
+        sails.log.verbose('Saved embed file', Publish.file.key)
         callback(null, html)
       })
     })
@@ -92,7 +92,7 @@ module.exports = {
    * @param {Function} callback
    * @return void
    */
-  publish: function(callback) {
+  upload: function(callback) {
     var Publish = this
 
     var client = s3.createClient({
@@ -110,12 +110,42 @@ module.exports = {
         ContentType: 'text/html'
       },
     }).on('error', function(err) {
-      console.error('unable to upload:', err.stack)
+      sails.log.error('Unable to upload to s3:', err.stack)
     }).on('progress', function() {
-      console.log('progress', uploader.progressMd5Amount, uploader.progressAmount, uploader.progressTotal)
+      // sails.log.verbose('progress', uploader.progressMd5Amount, uploader.progressAmount, uploader.progressTotal)
     }).on('end', function() {
-      console.log('Published embed file', Publish.file.key)
+      sails.log.verbose('Published embed file', Publish.file.key)
+      callback(null, Publish.file.key)
     })
+  },
+
+  /**
+   * Update publish info
+   *
+   * @param {String} s3 path
+   * @param {Function} callback
+   * @return void
+   */
+  record: function(path, callback) {
+    var Publish = this
+
+    // sails.models.published.create({
+    //   date: new Date(),
+    //   path: path,
+    //   timeline: this.timeline.id
+    // }).exec(function(err, published) {
+    //     if(err) callback(err)
+    //     callback(null, published)
+    //   })
+    sails.models.timeline.update(this.timeline.id, {
+      published: {
+        date: new Date(),
+        path: path
+      }
+    }).exec(function(err, published) {
+        if(err) callback(err)
+        callback(null, published)
+      })
   },
 
   /**
@@ -124,7 +154,7 @@ module.exports = {
    * @param {Integer} timeline id
    * @return {Object} timeline
    */
-  execute: function(id) {
+  execute: function(id, callback) {
     var Publish = this
 
     async.waterfall([
@@ -147,23 +177,30 @@ module.exports = {
         })
       },
       function(html, cb) { // Save file locally
-        Publish.save(html, function(err, data) {
+        Publish.write(html, function(err, data) {
           if(err) cb(err)
           cb(null, data)
         })
       },
-      function(html, cb) { // Publish to s3
-        Publish.publish(html, function(err, data) {
+      function(html, cb) { // Upload to s3
+        Publish.upload(function(err, path) {
           if(err) cb(err)
-          cb(null, data)
+          cb(null, path)
+        })
+      },
+      function(path, cb) { // Create Published record
+        Publish.record(path, function(err, published) {
+          if(err) cb(err)
+          cb(null, published)
         })
       }
-    ], function (err, result) { // Complete
+    ], function(err, result) { // Complete
       if(err) {
         throw err
       }
       else {
-        console.log('Success')
+        sails.log('Published timeline', Publish.file.key)
+        if(callback) callback(null, result)
       }
     })
   }

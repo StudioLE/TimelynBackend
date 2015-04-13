@@ -35,6 +35,9 @@ module.exports = {
 		asset: {
 			model: 'media'
 		},
+		published: {
+      model: 'published'
+    },
 
 		// Lifecycle callbacks
 		afterDestroy: function(records, cb) {
