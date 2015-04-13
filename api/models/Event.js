@@ -36,6 +36,20 @@ module.exports = {
 		},
 		asset: {
 			model: 'media'
+		},
+
+		// Lifecycle callbacks
+		afterDestroy: function(records, cb) {
+			// @todo Destroy associated media when a event is deleted
+			sails.log('Event destroyed')
+			sails.log(records)
+			cb()
+		},
+		afterUpdate: function(records, cb) {
+			// @todo Destroy associated media when event is updated and media changes
+			sails.log('Event Updated')
+			sails.log(records)
+			cb()
 		}
 	}
 };

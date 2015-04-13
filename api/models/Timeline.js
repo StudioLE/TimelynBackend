@@ -19,7 +19,7 @@ module.exports = {
 			defaultsTo: 'default'
 		},
 		text: 'text',
-		era: {  
+		era: {
 			type: 'array',
 			defaultsTo: []
 		},
@@ -34,6 +34,14 @@ module.exports = {
 		},
 		asset: {
 			model: 'media'
+		},
+
+		// Lifecycle callbacks
+		afterDestroy: function(records, cb) {
+			// @todo Destroy associated events and media when a timeline is deleted
+			sails.log('Timeline destroyed')
+			sails.log(records)
+			cb()
 		}
 	}
 };
